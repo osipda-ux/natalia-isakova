@@ -2,7 +2,8 @@
 <html lang="ru">
 <head>
 <meta charset="utf-8">
-  <meta name="darkreader-lock">
+<meta name="darkreader-lock">
+<meta name="color-scheme" content="light">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Наталья Исакова — бизнес-консультант. Карта вашего дела, разбор, наставничество</title>
 <meta name="description" content="Найдём, какая шестерёнка в вашем бизнесе не сцепляется. Бесплатный созвон «Карта вашего дела», подробный разбор вашего дела и наставничество на 3 или 6 месяцев с Натальей Исаковой, к.э.н.">
@@ -33,7 +34,8 @@
 html{-webkit-text-size-adjust:100%}
 html.lenis,html.lenis body{height:auto}
 .lenis.lenis-smooth{scroll-behavior:auto!important}
-body{margin:0;background:var(--paper);color:var(--ink);font:400 19px/1.62 var(--sans);-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;overflow-x:hidden}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 19px/1.62 var(--sans);-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;overflow-x:hidden;overflow-x:clip}
+html{overflow-x:clip}
 ::selection{background:var(--cobalt);color:#fff}
 html{scrollbar-color:var(--ice) var(--paper)}
 img,video,svg{display:block;max-width:100%}
@@ -142,16 +144,28 @@ nav.menu a.btn,nav.menu a.btn:hover{color:#fff}
 .mech-top .lead{color:var(--on-night-2)}
 .train{margin-top:60px;position:relative}
 .train svg{width:100%;height:auto;overflow:visible}
-.gear-shape{fill:var(--night-2);stroke:var(--glow);stroke-width:1.6;vector-effect:non-scaling-stroke;transition:fill .4s,stroke .4s}
-.gear-hub{fill:var(--night);stroke:var(--glow);stroke-width:1.2;vector-effect:non-scaling-stroke}
-.gear-spoke{stroke:var(--night-line);stroke-width:1.2;vector-effect:non-scaling-stroke}
+.gear-shape{fill:url(#gmBlue);stroke:#8FBDF0;stroke-opacity:.55;stroke-width:1.3;vector-effect:non-scaling-stroke;stroke-linejoin:round}
+.gear-rim{fill:none;stroke:#05101F;stroke-opacity:.55;stroke-width:3;vector-effect:non-scaling-stroke}
+.gear-rim2{fill:none;stroke:#BFD8F5;stroke-opacity:.14;stroke-width:1.5;vector-effect:non-scaling-stroke}
+.gear-hole{fill:url(#gmHole);stroke:#8FBDF0;stroke-opacity:.28;stroke-width:1;vector-effect:non-scaling-stroke}
+.gear-hub{fill:url(#gmHub);stroke:#BFD8F5;stroke-opacity:.5;stroke-width:1.2;vector-effect:non-scaling-stroke}
+.gear-bore{fill:#06101E;stroke:#000;stroke-opacity:.4;stroke-width:1;vector-effect:non-scaling-stroke}
+.gear-bolt{fill:#C9DDF5;fill-opacity:.75}
+.gear-light{fill:url(#gmLight);pointer-events:none}
+.gear-glint{fill:none;stroke:#fff;stroke-opacity:.22;stroke-width:3.5;stroke-linecap:round;vector-effect:non-scaling-stroke;pointer-events:none}
+.gear-shadow{fill:url(#gmShadow);pointer-events:none}
+.gear-side{fill:url(#gmSide);stroke:#020812;stroke-opacity:.6;stroke-width:1;vector-effect:non-scaling-stroke;stroke-linejoin:round}
+.gear.stopped .gear-side{fill:url(#gmSideDim)}
+.gear.stuck .gear-side{fill:url(#gmSideWarm)}
 .gear{cursor:pointer;outline:none}
-.gear:hover .gear-shape,.gear.on .gear-shape{fill:#1A355A;stroke:#CFE3FB}
-.gear:focus-visible .gear-shape{stroke:#fff;stroke-width:3}
-.gear.stopped .gear-shape{stroke:#5B7396;fill:#101F35}
-.gear.stopped .gear-hub{stroke:#5B7396}
-.gear.stuck .gear-shape{stroke:var(--warm);fill:#2A2216}
-.gear.stuck .gear-hub{stroke:var(--warm)}
+.gear .rot{transition:filter .4s}
+.gear:hover .gear-shape,.gear.on .gear-shape{fill:url(#gmBlueHi);stroke-opacity:.9}
+.gear:focus-visible .gear-shape{stroke:#fff;stroke-width:3;stroke-opacity:1}
+.gear.stopped .gear-shape{fill:url(#gmDim);stroke-opacity:.3}
+.gear.stopped .gear-hub{fill:url(#gmHubDim)}
+.gear.stuck .gear-shape{fill:url(#gmWarm);stroke:#F0C79A;stroke-opacity:.7}
+.gear.stuck .gear-hub{fill:url(#gmHubWarm)}
+.gear.stuck .gear-hole{stroke:#F0C79A}
 .glabel{font:600 21px var(--sans);fill:var(--on-night);text-anchor:middle;pointer-events:none;letter-spacing:-.01em}
 .glabel.dim{fill:#7F96B6}
 .glabel.warm{fill:#F0C79A}
@@ -306,7 +320,7 @@ footer{position:relative;z-index:2;margin-top:110px;padding-top:28px;border-top:
 .org svg.links line{stroke:var(--ice);stroke-width:2;stroke-dasharray:6 7}
 .org svg.links line.on{stroke:var(--cobalt);stroke-dasharray:none}
 .core{position:absolute;left:50%;top:50%;width:34%;aspect-ratio:1;transform:translate(-50%,-50%);border-radius:50%;background:var(--night);color:#fff;display:grid;place-items:center;text-align:center;font-weight:700;font-size:clamp(15px,1.4vw,19px);line-height:1.25;box-shadow:0 30px 60px -30px rgba(14,30,52,.6);padding:12px}
-.core small{display:block;font-weight:500;color:var(--on-night-2);font-size:.78em;margin-top:4px}
+.core small{display:block;font-weight:500;color:var(--on-night-2);font-size:max(.78em,13px);margin-top:4px}
 .seat{position:absolute;width:40%;transform:translate(-50%,-50%);background:rgba(255,255,255,.55);border:1.5px dashed var(--ice);border-radius:20px;padding:14px 14px 14px 12px;display:flex;gap:12px;align-items:center;transition:background .6s var(--ease),border-color .6s var(--ease),box-shadow .6s var(--ease)}
 .seat .av{flex:none;width:46px;height:46px;border-radius:50%;background:var(--mist) center/cover;border:2px dashed var(--ice);transition:border-color .6s,transform .7s var(--ease)}
 .seat .av img{width:100%;height:100%;border-radius:50%;object-fit:cover;opacity:0;transform:scale(.6);transition:opacity .5s,transform .7s var(--ease)}
@@ -382,12 +396,17 @@ footer{position:relative;z-index:2;margin-top:110px;padding-top:28px;border-top:
 .gapbox b{color:#8A5A28}
 .stepbox{margin-top:12px;border-radius:16px;background:var(--mist);padding:16px 18px;font-size:16px;line-height:1.45;color:var(--ink-2)}
 .stepbox b{color:var(--cobalt)}
-.sig{margin-top:18px;display:flex;justify-content:space-between;align-items:center;font-size:14px;color:var(--ink-3)}
+.sig{margin-top:18px;display:flex;justify-content:space-between;align-items:center;font-size:14px;color:var(--ink-3);padding-right:150px;min-height:56px}
+.mapdoc{margin-bottom:40px}
 .sig i{font-family:var(--accent);font-size:22px;color:var(--ink)}
-.stamp{position:absolute;right:-22px;bottom:70px;width:112px;height:112px;border-radius:50%;border:2px solid var(--cobalt);color:var(--cobalt);display:grid;place-items:center;text-align:center;font-size:13px;font-weight:800;letter-spacing:.06em;line-height:1.2;background:rgba(245,248,252,.9);transform:rotate(12deg)}
+.stamp{position:absolute;right:10px;bottom:-54px;width:176px;height:176px;z-index:6;pointer-events:none;color:#1F4F96;mix-blend-mode:multiply;opacity:0;transform:rotate(-10deg)}
+.stamp svg{display:block;width:100%;height:100%;overflow:visible}
+.stamp .burst{position:absolute;inset:-6%;border-radius:50%;border:3px solid #2559A0;opacity:0;pointer-events:none}
+.stamp .drop{position:absolute;left:50%;top:50%;width:7px;height:7px;margin:-3.5px;border-radius:50%;background:#2559A0;opacity:0}
+.mapdoc.hit{box-shadow:0 30px 60px -36px rgba(14,30,52,.6)}
 .anim .gapbox,.anim .stepbox{opacity:0;transform:translateY(16px)}
 @media (max-width:1020px){.get .wrap{grid-template-columns:1fr}.mapdoc{transform:none}}
-@media (max-width:560px){.mapdoc{padding:26px 20px}.stamp{width:88px;height:88px;font-size:11px;right:-6px;bottom:60px}.rows li{font-size:15px}}
+@media (max-width:560px){.mapdoc{padding:26px 20px}.stamp{width:132px;height:132px;right:0;bottom:-46px}.sig{padding-right:104px;flex-direction:column;align-items:flex-start;gap:2px}.rows li{font-size:15px}}
 
 
 /* sound overlay */
@@ -467,6 +486,15 @@ footer{position:relative;z-index:2;margin-top:110px;padding-top:28px;border-top:
 @media (max-width:400px){.brand{font-size:16px;gap:8px}.brand svg{width:24px;height:24px}nav.menu .btn{padding:0 14px;height:42px;font-size:14px}.top .wrap{height:68px}}
 @media (prefers-reduced-motion:reduce){
   *,*::before,*::after{animation:none!important;transition-duration:.01ms!important}
+}
+
+@media (max-width:700px){
+  .screen{aspect-ratio:9/16;width:min(100%,calc((100svh - 130px)*9/16));margin-left:auto;margin-right:auto;margin-top:36px}
+  .thumbs{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:12px;margin:18px -24px 0;padding:4px 24px 10px;scroll-padding-left:24px;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+  .thumbs::-webkit-scrollbar{display:none}
+  .thumb{flex:0 0 128px;scroll-snap-align:start;padding:6px}
+  .thumb .tv{aspect-ratio:9/16;border-radius:12px}
+  .thumb .ti{font-size:13px}
 }
 </style>
 </head>
@@ -573,7 +601,20 @@ footer{position:relative;z-index:2;margin-top:110px;padding-top:28px;border-top:
       </div>
     </div>
     <div class="mapdoc" id="mapdoc" aria-label="Пример карты дела">
-      <div class="stamp" id="stamp" aria-hidden="true">ВАША<br>КАРТА<br>ДЕЛА</div>
+      <div class="stamp" id="stamp" aria-hidden="true"><span class="burst"></span><span class="drop"></span><span class="drop"></span><span class="drop"></span><span class="drop"></span><span class="drop"></span><span class="drop"></span><span class="drop"></span><span class="drop"></span>
+        <svg viewBox="0 0 200 200"><defs>
+          <path id="stArc" d="M34,100 a66,66 0 1,1 132,0 a66,66 0 1,1 -132,0"/>
+          <filter id="inkWorn" x="-10%" y="-10%" width="120%" height="120%"><feTurbulence type="fractalNoise" baseFrequency=".85" numOctaves="2" seed="4" result="n"/><feColorMatrix in="n" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -2.4 0 0 0 2.05" result="m"/><feComposite in="SourceGraphic" in2="m" operator="in" result="t"/><feTurbulence type="fractalNoise" baseFrequency=".045" numOctaves="2" seed="9" result="w"/><feDisplacementMap in="t" in2="w" scale="3.2" xChannelSelector="R" yChannelSelector="G"/></filter>
+        </defs>
+        <g filter="url(#inkWorn)">
+          <circle cx="100" cy="100" r="93" fill="none" stroke="currentColor" stroke-width="6"/>
+          <circle cx="100" cy="100" r="84" fill="none" stroke="currentColor" stroke-width="1.8"/>
+          <circle cx="100" cy="100" r="52" fill="none" stroke="currentColor" stroke-width="1.8"/>
+          <text font-family="Onest,Arial,sans-serif" font-size="13.5" font-weight="800" fill="currentColor" letter-spacing="1.6" textLength="400" lengthAdjust="spacing"><textPath href="#stArc">НАТАЛЬЯ ИСАКОВА ★ БИЗНЕС-КОНСУЛЬТАНТ ★</textPath></text>
+          <text x="100" y="82" text-anchor="middle" font-family="Onest,Arial,sans-serif" font-size="13" font-weight="800" letter-spacing="3" fill="currentColor">ВАША</text>
+          <text x="100" y="110" text-anchor="middle" font-family="Onest,Arial,sans-serif" font-size="27" font-weight="800" letter-spacing="1" fill="currentColor">КАРТА</text>
+          <text x="100" y="130" text-anchor="middle" font-family="Onest,Arial,sans-serif" font-size="13" font-weight="800" letter-spacing="3" fill="currentColor">ДЕЛА</text>
+        </g></svg></div>
       <div class="hd"><div><b>Карта вашего дела</b><small>после созвона с Натальей Исаковой</small></div><span class="ex">ПРИМЕР</span></div>
       <ul class="rows" id="rows">
         <li data-s="ok">Смысл и цель<span class="st"><span class="lbl">работает</span><span class="d"></span></span></li>
@@ -875,6 +916,18 @@ document.querySelectorAll('[data-words]').forEach(p=>{
 
 /* ---------- gear train ---------- */
 const train=document.getElementById('trainSvg');
+train.innerHTML=`<defs>
+<radialGradient id="gmBlue" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#132A4A"/><stop offset=".55" stop-color="#1D3E6A"/><stop offset=".8" stop-color="#2F5F98"/><stop offset=".93" stop-color="#4B84C6"/><stop offset="1" stop-color="#7FB0EA"/></radialGradient>
+<radialGradient id="gmBlueHi" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#1A3A63"/><stop offset=".55" stop-color="#27518A"/><stop offset=".8" stop-color="#3D74B8"/><stop offset=".93" stop-color="#6A9FDE"/><stop offset="1" stop-color="#B7D5F7"/></radialGradient>
+<radialGradient id="gmDim" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#0E1C31"/><stop offset=".6" stop-color="#15263F"/><stop offset=".85" stop-color="#22385A"/><stop offset="1" stop-color="#3E5A80"/></radialGradient>
+<radialGradient id="gmWarm" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#2A1D10"/><stop offset=".55" stop-color="#4A321A"/><stop offset=".8" stop-color="#8A5A28"/><stop offset=".93" stop-color="#C98A4B"/><stop offset="1" stop-color="#F0C79A"/></radialGradient>
+<radialGradient id="gmHole" cx=".5" cy=".38" r=".62"><stop offset="0" stop-color="#030912"/><stop offset=".8" stop-color="#0A1729"/><stop offset="1" stop-color="#1B3354"/></radialGradient>
+<radialGradient id="gmHub" cx=".38" cy=".32" r=".75"><stop offset="0" stop-color="#E3EEFB"/><stop offset=".35" stop-color="#8FB4DE"/><stop offset=".75" stop-color="#3A659A"/><stop offset="1" stop-color="#1A3557"/></radialGradient>
+<radialGradient id="gmHubDim" cx=".38" cy=".32" r=".75"><stop offset="0" stop-color="#8A9DB7"/><stop offset=".5" stop-color="#4A6286"/><stop offset="1" stop-color="#16263D"/></radialGradient>
+<radialGradient id="gmHubWarm" cx=".38" cy=".32" r=".75"><stop offset="0" stop-color="#FBE6CC"/><stop offset=".4" stop-color="#D9A266"/><stop offset=".8" stop-color="#8A5A28"/><stop offset="1" stop-color="#3B2610"/></radialGradient>
+<linearGradient id="gmLight" x1=".15" y1=".1" x2=".85" y2=".95"><stop offset="0" stop-color="#fff" stop-opacity=".16"/><stop offset=".45" stop-color="#fff" stop-opacity="0"/><stop offset=".7" stop-color="#000" stop-opacity=".08"/><stop offset="1" stop-color="#000" stop-opacity=".42"/></linearGradient>
+<linearGradient id="gmSide" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0B1B31"/><stop offset=".6" stop-color="#173459"/><stop offset="1" stop-color="#2C5487"/></linearGradient><linearGradient id="gmSideDim" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#08121F"/><stop offset="1" stop-color="#1E3352"/></linearGradient><linearGradient id="gmSideWarm" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2A1A0B"/><stop offset=".6" stop-color="#5A3816"/><stop offset="1" stop-color="#9A6430"/></linearGradient><radialGradient id="gmShadow" cx=".5" cy=".5" r=".5"><stop offset=".55" stop-color="#000" stop-opacity=".55"/><stop offset="1" stop-color="#000" stop-opacity="0"/></radialGradient>
+</defs>`;
 const MOB=matchMedia('(max-width:700px)').matches;
 const D=12;
 const G=[
@@ -901,6 +954,7 @@ let minX=Infinity,minY=Infinity,maxX=-Infinity,maxY=-Infinity;
 G.forEach(g=>{minX=Math.min(minX,g.x-g.R);maxX=Math.max(maxX,g.x+g.R);minY=Math.min(minY,g.y-g.R);maxY=Math.max(maxY,g.y+g.R+60)});
 const pad=40,padX=MOB?150:40;train.setAttribute('viewBox',`${minX-padX} ${minY-pad} ${maxX-minX+padX*2} ${maxY-minY+pad*2+20}`);
 const STUCK=4,SHIFT=46;
+const shadowsG=train.appendChild(document.createElementNS(svgNS,'g'));
 const stuckVec=(()=>{const th=G[STUCK].th*Math.PI/180;return[Math.cos(th)*SHIFT,Math.sin(th)*SHIFT]})();
 G.forEach((g,i)=>{
   const grp=document.createElementNS(svgNS,'g');grp.setAttribute('class','gear'+(i>=STUCK?' stopped':'')+(i===STUCK?' stuck':''));
@@ -909,9 +963,22 @@ G.forEach((g,i)=>{
   const rot=document.createElementNS(svgNS,'g');
   const p=document.createElementNS(svgNS,'path');p.setAttribute('class','gear-shape');p.setAttribute('d',gearPath(g.x,g.y,g.R,g.T,D));
   rot.appendChild(p);
-  for(let k=0;k<(g.T>15?6:4);k++){const a=k*Math.PI*2/(g.T>15?6:4);const ln=document.createElementNS(svgNS,'line');ln.setAttribute('class','gear-spoke');ln.setAttribute('x1',g.x+Math.cos(a)*g.R*.3);ln.setAttribute('y1',g.y+Math.sin(a)*g.R*.3);ln.setAttribute('x2',g.x+Math.cos(a)*(g.R-D-8));ln.setAttribute('y2',g.y+Math.sin(a)*(g.R-D-8));rot.appendChild(ln)}
-  const hub=document.createElementNS(svgNS,'circle');hub.setAttribute('class','gear-hub');hub.setAttribute('cx',g.x);hub.setAttribute('cy',g.y);hub.setAttribute('r',Math.max(14,g.R*.28));
-  rot.appendChild(hub);mover.appendChild(rot);
+  const ns=(t,a)=>{const e=document.createElementNS(svgNS,t);for(const k in a)e.setAttribute(k,a[k]);return e};
+  const root=g.R-D,hubR=Math.max(15,g.R*.27),nH=g.T>15?6:(g.T>12?5:4),hr=(hubR+root)/2,hs=Math.min((root-hubR)*.27,hr*Math.sin(Math.PI/nH)*.55);
+  rot.setAttribute('class','rot');
+  g.th=Math.max(5,g.R*.075);const side=ns('g',{});side.appendChild(ns('path',{class:'gear-side',d:gearPath(g.x,g.y,g.R,g.T,D)}));mover.appendChild(side);g.side=side;
+  rot.appendChild(ns('circle',{class:'gear-rim',cx:g.x,cy:g.y,r:root-4}));
+  rot.appendChild(ns('circle',{class:'gear-rim2',cx:g.x,cy:g.y,r:root-8}));
+  for(let k=0;k<nH;k++){const a=k*Math.PI*2/nH;rot.appendChild(ns('circle',{class:'gear-hole',cx:g.x+Math.cos(a)*hr,cy:g.y+Math.sin(a)*hr,r:hs}))}
+  rot.appendChild(ns('circle',{class:'gear-hub',cx:g.x,cy:g.y,r:hubR}));
+  rot.appendChild(ns('circle',{class:'gear-bore',cx:g.x,cy:g.y,r:hubR*.38}));
+  for(let k=0;k<3;k++){const a=k*Math.PI*2/3+.5;rot.appendChild(ns('circle',{class:'gear-bolt',cx:g.x+Math.cos(a)*hubR*.68,cy:g.y+Math.sin(a)*hubR*.68,r:Math.max(1.8,hubR*.08)}))}
+  // fixed light (does not rotate): shadow below, shading + glint above
+  g.sh=shadowsG.appendChild(ns('circle',{class:'gear-shadow',cx:g.x+g.R*.05,cy:g.y+g.R*.14,r:g.R*1.12}));
+  mover.appendChild(rot);
+  mover.appendChild(ns('circle',{class:'gear-light',cx:g.x,cy:g.y,r:root-1}));
+  const gr=root-12,a1=Math.PI*1.08,a2=Math.PI*1.42;
+  mover.appendChild(ns('path',{class:'gear-glint',d:`M${(g.x+Math.cos(a1)*gr).toFixed(1)} ${(g.y+Math.sin(a1)*gr).toFixed(1)}A${gr} ${gr} 0 0 1 ${(g.x+Math.cos(a2)*gr).toFixed(1)} ${(g.y+Math.sin(a2)*gr).toFixed(1)}`}));
   const dot=document.createElementNS(svgNS,'circle');dot.setAttribute('cx',g.x);dot.setAttribute('cy',g.y);dot.setAttribute('r',4);dot.setAttribute('fill',i===STUCK?'#C98A4B':'#7FB0EA');mover.appendChild(dot);
   const lab=document.createElementNS(svgNS,'text');lab.setAttribute('class','glabel'+(i>STUCK?' dim':'')+(i===STUCK?' warm':''));
   const below=MOB?(i%2===0):(g.y>=G[Math.max(0,i-1)].y||i===0);
@@ -924,7 +991,7 @@ G.forEach((g,i)=>{
 });
 // stuck gear offset: time gear and all downstream shift away
 let shiftK=1;
-function applyShift(){for(let i=STUCK;i<G.length;i++)G[i].mover.setAttribute('transform',`translate(${stuckVec[0]*shiftK} ${stuckVec[1]*shiftK})`)}
+function applyShift(){for(let i=STUCK;i<G.length;i++){const tr=`translate(${stuckVec[0]*shiftK} ${stuckVec[1]*shiftK})`;G[i].mover.setAttribute('transform',tr);G[i].sh.setAttribute('transform',tr)}}
 applyShift();
 const mpLabel=document.getElementById('mpLabel'),mpQ=document.getElementById('mpQ'),mpHint=document.getElementById('mpHint');
 let fixed=false;
@@ -936,7 +1003,7 @@ function frame(t){
   const dt=Math.min(.05,(t-lastT)/1000);lastT=t;
   if(inView){A+=dt*(base+speed);if(fixed)A2+=(A-A2)*Math.min(1,dt*3.2);}
   speed*=.92;
-  G.forEach((g,i)=>{const acc=(i>=STUCK)?A2:A;const ang=g.phase+g.dir*acc*(G[0].T/g.T);g.rot.setAttribute('transform',`rotate(${ang.toFixed(2)} ${g.x} ${g.y})`)});
+  G.forEach((g,i)=>{const acc=(i>=STUCK)?A2:A;const ang=g.phase+g.dir*acc*(G[0].T/g.T);const tr=`rotate(${ang.toFixed(2)} ${g.x} ${g.y})`;g.rot.setAttribute('transform',tr);g.side.setAttribute('transform',`translate(${(g.th*.35).toFixed(1)} ${g.th.toFixed(1)}) `+tr)});
   requestAnimationFrame(frame);
 }
 requestAnimationFrame(frame);
@@ -969,10 +1036,12 @@ function fillSeats(){seats.forEach((st,i)=>setTimeout(()=>{st.classList.add('fil
 /* ---------- thumbs ---------- */
 const V=[['01','Какая шестерёнка не сцепляется','0:20'],['02','Арт-студия: новое из того, что уже умеешь','0:33'],['03','Клиенты должны помещаться в жизнь','0:26'],['04','Контент вырастает из смыслов','0:21'],['05','Увидеть процесс, прежде чем его менять','0:32'],['06','Сначала система, потом управляющий','0:21'],['07','Что значит «плохо работает»?','0:22'],['08','Цена — от рынка, а не от ощущений','0:19']];
 const thumbs=document.getElementById('thumbs'),vid=document.getElementById('vid');
+const VS=n=>MOB?`v${n}m.mp4`:`v${n}.mp4`,VP=n=>MOB?`p${n}m.jpg`:`p${n}.jpg`;
+if(MOB){vid.poster=VP('01');vid.src=VS('01')}
 V.forEach(([n,t,d],i)=>{const b=document.createElement('button');b.className='thumb reveal';b.type='button';if(!i)b.setAttribute('aria-current','true');
-  b.innerHTML=`<div class="tv"><img src="p${n}.jpg" alt="" loading="lazy"></div><div class="ti"><span>${n}</span>${t}<span class="eqmini" aria-hidden="true"><i></i><i></i><i></i></span><em>${d}</em></div>`;
+  b.innerHTML=`<div class="tv"><img src="${VP(n)}" alt="" loading="lazy"></div><div class="ti"><span>${n}</span>${t}<span class="eqmini" aria-hidden="true"><i></i><i></i><i></i></span><em>${d}</em></div>`;
   if(FINE){let pv;b.addEventListener('mouseenter',()=>{if(!pv){pv=document.createElement('video');pv.muted=true;pv.loop=true;pv.playsInline=true;pv.preload='none';pv.src=`v${n}.mp4#t=3`;b.querySelector('.tv').appendChild(pv)}pv.play().catch(()=>{})});b.addEventListener('mouseleave',()=>{pv&&pv.pause()})}
-  b.addEventListener('click',()=>{thumbs.querySelectorAll('.thumb').forEach(x=>x.removeAttribute('aria-current'));b.setAttribute('aria-current','true');vid.poster=`p${n}.jpg`;vid.src=`v${n}.mp4`;vid.muted=false;document.getElementById('ovSub').textContent='Наталья рассказывает сама · '+d;vid.setAttribute('aria-label','Видео: '+t);vid.play().catch(()=>{});if(window.innerWidth<1020)vid.scrollIntoView({behavior:'smooth',block:'center'})});
+  b.addEventListener('click',()=>{thumbs.querySelectorAll('.thumb').forEach(x=>x.removeAttribute('aria-current'));b.setAttribute('aria-current','true');vid.poster=VP(n);vid.src=VS(n);vid.muted=false;document.getElementById('ovSub').textContent='Наталья рассказывает сама · '+d;vid.setAttribute('aria-label','Видео: '+t);vid.play().catch(()=>{});if(window.innerWidth<1020)vid.scrollIntoView({behavior:'smooth',block:'center'})});
   thumbs.appendChild(b)});
 const scr=document.getElementById('screen'),ov=document.getElementById('playOv');
 ov.addEventListener('click',()=>{vid.muted=false;vid.volume=1;vid.play().catch(()=>{})});
@@ -1000,7 +1069,7 @@ if(FINE&&!REDUCE)document.querySelectorAll('.tilt').forEach(el=>{
 
 const loader=document.getElementById('loader');
 /* ---------- no motion / no gsap: show everything ---------- */
-if(REDUCE||!HAS_GSAP){loader.remove();fillSeats();fillRows();document.querySelectorAll('.pain .w').forEach(w=>w.style.opacity=1);document.querySelectorAll('[data-count]').forEach(s=>{s.textContent=s.dataset.dec?(+s.dataset.count).toFixed(1).replace('.',','):s.dataset.count});document.querySelectorAll('.n .s').forEach(s=>s.style.setProperty('--k',1));return}
+if(REDUCE||!HAS_GSAP){loader.remove();fillSeats();fillRows();document.getElementById('stamp').style.opacity=.9;document.querySelectorAll('.pain .w').forEach(w=>w.style.opacity=1);document.querySelectorAll('[data-count]').forEach(s=>{s.textContent=s.dataset.dec?(+s.dataset.count).toFixed(1).replace('.',','):s.dataset.count});document.querySelectorAll('.n .s').forEach(s=>s.style.setProperty('--k',1));return}
 
 document.body.classList.add('anim');
 gsap.registerPlugin(ScrollTrigger);
@@ -1073,7 +1142,23 @@ gsap.from('.core',{scale:.6,opacity:0,duration:1.2,ease:'back.out(1.6)',scrollTr
 ScrollTrigger.create({trigger:'#mapdoc',start:'top 70%',once:true,onEnter:()=>{fillRows();
   gsap.to('.gapbox',{opacity:1,y:0,duration:.9,ease:'expo.out',delay:2.6});
   gsap.to('.stepbox',{opacity:1,y:0,duration:.9,ease:'expo.out',delay:3.0});
-  gsap.fromTo('#stamp',{scale:2.2,opacity:0,rotate:-20},{scale:1,opacity:1,rotate:12,duration:.6,ease:'back.out(2.4)',delay:3.5})}});
+  stampIt(3.6)}});
+function stampIt(delay){
+  const st=document.getElementById('stamp'),card=document.getElementById('mapdoc'),burst=st.querySelector('.burst'),drops=[...st.querySelectorAll('.drop')];
+  if(REDUCE){gsap.set(st,{opacity:.92,rotate:-10});return}
+  const tl=gsap.timeline({delay});
+  tl.set(st,{opacity:0,scale:3.2,rotate:-34,y:-90,filter:'blur(10px)'})
+    .to(st,{opacity:.95,duration:.14,ease:'none'},0)
+    .to(st,{scale:.9,rotate:-10,y:0,filter:'blur(0px)',duration:.36,ease:'power4.in'},0)
+    .to(st,{scaleX:1.07,scaleY:.92,duration:.07,ease:'power2.out'},.36)
+    .to(st,{scaleX:1,scaleY:1,scale:1,duration:.9,ease:'elastic.out(1,.42)'},.43)
+    .to(st,{opacity:.92,duration:1.2,ease:'power2.out'},.5)
+    .add(()=>card.classList.add('hit'),.36)
+    .to(card,{keyframes:[{x:5,y:4,duration:.045},{x:-4,y:-2,duration:.05},{x:2,y:2,duration:.05},{x:0,y:0,duration:.08}],ease:'none'},.36)
+    .fromTo(burst,{scale:.7,opacity:.55},{scale:1.9,opacity:0,duration:.75,ease:'expo.out'},.36);
+  drops.forEach((d,i)=>{const a=i/drops.length*Math.PI*2+Math.random()*.5,r=80+Math.random()*50;
+    tl.fromTo(d,{x:0,y:0,scale:.4+Math.random()*.9,opacity:.75},{x:Math.cos(a)*r,y:Math.sin(a)*r,opacity:0,duration:.6+Math.random()*.3,ease:'expo.out'},.36)});
+}
 gsap.from('#mapdoc',{y:80,rotate:4,opacity:0,duration:1.3,ease:'expo.out',scrollTrigger:{trigger:'#mapdoc',start:'top 85%'}});
 
 /* counters */
