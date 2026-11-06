@@ -7,6 +7,20 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Наталья Исакова — бизнес-консультант. Карта вашего дела, разбор, наставничество</title>
 <meta name="description" content="Найдём, какая шестерёнка в вашем бизнесе не сцепляется. Бесплатный созвон «Карта вашего дела», подробный разбор вашего дела и наставничество на 3 или 6 месяцев с Натальей Исаковой, к.э.н.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Наталья Исакова">
+<meta property="og:locale" content="ru_RU">
+<meta property="og:url" content="https://osipda-ux.github.io/natalia-isakova/">
+<meta property="og:title" content="Наталья Исакова — бизнес-консультант, к.э.н.">
+<meta property="og:description" content="Найдём, какая шестерёнка в вашем бизнесе не сцепляется. Бесплатный созвон «Карта вашего дела» — 30 минут.">
+<meta property="og:image" content="https://osipda-ux.github.io/natalia-isakova/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Наталья Исакова — бизнес-консультант">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://osipda-ux.github.io/natalia-isakova/og.jpg">
+<link rel="icon" type="image/webp" href="ava.webp">
+
 <link rel="preload" href="onest-800.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="onest-400.woff2" as="font" type="font/woff2" crossorigin>
 <style>
@@ -319,9 +333,9 @@ footer{position:relative;z-index:2;margin-top:110px;padding-top:28px;border-top:
 .org svg.links{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
 .org svg.links line{stroke:var(--ice);stroke-width:2;stroke-dasharray:6 7}
 .org svg.links line.on{stroke:var(--cobalt);stroke-dasharray:none}
-.core{position:absolute;left:50%;top:50%;width:34%;aspect-ratio:1;transform:translate(-50%,-50%);border-radius:50%;background:var(--night);color:#fff;display:grid;place-items:center;text-align:center;font-weight:700;font-size:clamp(15px,1.4vw,19px);line-height:1.25;box-shadow:0 30px 60px -30px rgba(14,30,52,.6);padding:12px}
-.core small{display:block;font-weight:500;color:var(--on-night-2);font-size:max(.78em,13px);margin-top:4px}
-.seat{position:absolute;width:40%;transform:translate(-50%,-50%);background:rgba(255,255,255,.55);border:1.5px dashed var(--ice);border-radius:20px;padding:14px 14px 14px 12px;display:flex;gap:12px;align-items:center;transition:background .6s var(--ease),border-color .6s var(--ease),box-shadow .6s var(--ease)}
+.core{position:absolute;left:50%;top:50%;width:30%;aspect-ratio:1;transform:translate(-50%,-50%);border-radius:50%;background:radial-gradient(circle at 35% 30%,#1D3A63,var(--night) 70%);color:#fff;display:flex;flex-direction:column;justify-content:center;align-items:center;z-index:1;text-align:center;font-weight:700;font-size:clamp(15px,1.4vw,19px);line-height:1.25;box-shadow:0 30px 60px -30px rgba(14,30,52,.6);padding:12px}
+.core small{display:block;font-weight:500;color:var(--on-night-2);font-size:max(.72em,13px);line-height:1.3;margin-top:6px;max-width:82%}
+.seat{position:absolute;width:35%;z-index:2;transform:translate(-50%,-50%);background:rgba(255,255,255,.55);border:1.5px dashed var(--ice);border-radius:20px;padding:14px 14px 14px 12px;display:flex;gap:12px;align-items:center;transition:background .6s var(--ease),border-color .6s var(--ease),box-shadow .6s var(--ease)}
 .seat .av{flex:none;width:46px;height:46px;border-radius:50%;background:var(--mist) center/cover;border:2px dashed var(--ice);transition:border-color .6s,transform .7s var(--ease)}
 .seat .av img{width:100%;height:100%;border-radius:50%;object-fit:cover;opacity:0;transform:scale(.6);transition:opacity .5s,transform .7s var(--ease)}
 .seat b{display:block;font-size:15px;letter-spacing:-.01em;line-height:1.2;color:var(--ink)}
@@ -352,9 +366,10 @@ footer{position:relative;z-index:2;margin-top:110px;padding-top:28px;border-top:
 .pan h3{margin-top:28px}
 .pan p{font-size:16px;line-height:1.5;color:#DCE8F7;margin:0;max-width:46ch}
 .pan .ex{font-variant-numeric:lining-nums;margin-top:16px;font-family:var(--accent);font-style:italic;font-size:19px;color:#fff;opacity:.92}
+@media (max-width:1240px){.team .wrap{grid-template-columns:1fr}.org{max-width:600px}}
 @media (max-width:1020px){
   .team .wrap,.aud-head{grid-template-columns:1fr}
-  .org{max-width:520px}
+  .org{max-width:600px}
   .panels{flex-direction:column;height:auto}
   .pan{min-height:380px}
 }
@@ -362,6 +377,7 @@ footer{position:relative;z-index:2;margin-top:110px;padding-top:28px;border-top:
   .org{aspect-ratio:auto;display:flex;flex-direction:column;gap:12px}
   .org svg.links{display:none}
   .core{position:static;transform:none;width:auto;aspect-ratio:auto;border-radius:20px;padding:20px}
+  .core small{max-width:none}
   .seat{position:static;transform:none;width:auto}
 }
 
@@ -373,7 +389,7 @@ footer{position:relative;z-index:2;margin-top:110px;padding-top:28px;border-top:
 .gl{margin:40px 0 0;padding:0;list-style:none;counter-reset:g}
 .gl li{display:grid;grid-template-columns:56px 1fr;gap:18px;padding:22px 0;border-top:1px solid var(--line)}
 .gl li:last-child{border-bottom:1px solid var(--line)}
-.gl .n{align-self:start;width:46px;height:46px;line-height:1;border-radius:50%;background:var(--cobalt);color:#fff;display:grid;place-items:center;font-weight:800;font-size:18px}
+.gl .n{align-self:start;flex:none;width:46px;height:46px;min-width:46px;padding:0;gap:0;border:0;grid-template-columns:none;line-height:1;border-radius:50%;box-shadow:0 10px 22px -12px rgba(37,89,160,.7);background:var(--cobalt);color:#fff;display:grid;place-items:center;font-weight:800;font-size:18px}
 .gl b{display:block;font-size:21px;letter-spacing:-.015em;margin-bottom:4px}
 .gl span{color:var(--ink-2);font-size:17px;line-height:1.5}
 .notfor{margin-top:26px;font-size:16px;color:var(--ink-3)}
@@ -715,11 +731,11 @@ footer{position:relative;z-index:2;margin-top:110px;padding-top:28px;border-top:
     <div class="org" id="org">
       <svg class="links" id="orgLinks" aria-hidden="true"></svg>
       <div class="core">Ваше дело<small>и вы как собственник</small></div>
-      <div class="seat" data-x="50" data-y="9"><div class="av"><img src="ava.webp" alt=""></div><div><b>Стратег</b><span>смыслы, цели, порядок шагов</span><span class="who">Наталья</span></div></div>
-      <div class="seat" data-x="82" data-y="32"><div class="av"><img src="ava.webp" alt=""></div><div><b>Финансовый директор</b><span>экономика, цена, план</span><span class="who">Наталья · к.э.н.</span></div></div>
-      <div class="seat" data-x="74" data-y="80"><div class="av"><img src="ava.webp" alt=""></div><div><b>Операционный директор</b><span>процессы, роли, ритм</span><span class="who">Наталья</span></div></div>
-      <div class="seat" data-x="26" data-y="80"><div class="av"><img src="ava.webp" alt=""></div><div><b>HR-директор</b><span>найм, задачи, обучение</span><span class="who">Наталья</span></div></div>
-      <div class="seat" data-x="18" data-y="32"><div class="av"><img src="ava.webp" alt=""></div><div><b>Продуктолог</b><span>линейка, упаковка, вход</span><span class="who">Наталья</span></div></div>
+      <div class="seat" data-x="50" data-y="11"><div class="av"><img src="ava.webp" alt=""></div><div><b>Стратег</b><span>смыслы, цели, порядок шагов</span><span class="who">Наталья</span></div></div>
+      <div class="seat" data-x="83" data-y="39"><div class="av"><img src="ava.webp" alt=""></div><div><b>Финансовый директор</b><span>экономика, цена, план</span><span class="who">Наталья · к.э.н.</span></div></div>
+      <div class="seat" data-x="71" data-y="87"><div class="av"><img src="ava.webp" alt=""></div><div><b>Операционный директор</b><span>процессы, роли, ритм</span><span class="who">Наталья</span></div></div>
+      <div class="seat" data-x="29" data-y="87"><div class="av"><img src="ava.webp" alt=""></div><div><b>HR‑директор</b><span>найм, задачи, обучение</span><span class="who">Наталья</span></div></div>
+      <div class="seat" data-x="17" data-y="39"><div class="av"><img src="ava.webp" alt=""></div><div><b>Продуктолог</b><span>линейка, упаковка, вход</span><span class="who">Наталья</span></div></div>
     </div>
   </div>
 </section>
