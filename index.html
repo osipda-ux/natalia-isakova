@@ -259,7 +259,7 @@ nav.menu a.btn,nav.menu a.btn:hover{color:#fff}
 .rung:nth-child(4) h3{color:#fff}
 .rung p{font-size:17px;color:var(--ink-2)}
 .rung:nth-child(4) p{color:var(--on-night-2)}
-.price{margin-top:auto;padding-top:22px;border-top:1px solid var(--line);font-size:30px;font-weight:800;letter-spacing:-.03em}
+.price{margin-top:auto;padding-top:22px;border-top:1px solid var(--line);font-size:30px;font-weight:800;letter-spacing:-.03em;line-height:1.15}
 .rung:nth-child(4) .price{border-color:var(--night-line);color:#fff}
 .price small{display:block;font-size:14px;font-weight:500;letter-spacing:0;color:var(--ink-3);margin-top:4px}
 .rung:nth-child(4) .price small{color:var(--on-night-2)}
@@ -478,7 +478,9 @@ footer{position:relative;z-index:2;margin-top:110px;padding-top:28px;border-top:
   .hprogress{display:none}
   .thumbs{grid-template-columns:repeat(2,1fr)}
   .rgrid{grid-template-columns:1fr}
-  .ladder{grid-template-columns:1fr}
+  .ladder{grid-template-columns:minmax(0,1fr)}
+  .rung{min-width:0}
+  .rung h3{font-size:clamp(26px,7.4vw,34px);overflow-wrap:break-word}
   .rung:nth-child(n){min-height:0}
   .stairs{display:none}
   .about-vis{height:560px;order:2}
@@ -500,6 +502,7 @@ footer{position:relative;z-index:2;margin-top:110px;padding-top:28px;border-top:
 }
 
 @media (max-width:700px){
+  .about .ghost{display:none}
   .pains,.mech,.steps,.cinema,.results,.ladder-sec,.nodo,.faq,.get,.aud,.team{padding-top:96px;padding-bottom:96px}
   .steps{padding-bottom:0}
   .about{padding-top:96px}
@@ -929,7 +932,7 @@ footer{position:relative;z-index:2;margin-top:110px;padding-top:28px;border-top:
       <article class="rung tilt">
         <span class="step">Шаг 3</span>
         <div class="meta">Встреча каждую неделю · внедряем вместе</div>
-        <h3>Наставничество на&nbsp;3&nbsp;или&nbsp;6&nbsp;месяцев</h3>
+        <h3>Наставничество на&nbsp;3&nbsp;или 6&nbsp;месяцев</h3>
         <p>Собираем и внедряем по шагам, с проверкой результата.</p>
         <div class="months">
           <div><b>Месяц 1</b><span>Смыслы, цели, продукты, модель и экономика</span></div>
