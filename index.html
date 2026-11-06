@@ -1,0 +1,1107 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Наталья Исакова — бизнес-консультант. Диагностика, разбор, наставничество</title>
+<meta name="description" content="Найдём, какая шестерёнка в вашем бизнесе не сцепляется. Бесплатный созвон «Карта вашего дела», подробный разбор вашего дела и наставничество на 3 или 6 месяцев с Натальей Исаковой, к.э.н.">
+<link rel="preload" href="onest-800.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="onest-400.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+@font-face{font-family:"Onest";src:url(onest-400.woff2) format("woff2");font-weight:400;font-display:swap}
+@font-face{font-family:"Onest";src:url(onest-500.woff2) format("woff2");font-weight:500;font-display:swap}
+@font-face{font-family:"Onest";src:url(onest-600.woff2) format("woff2");font-weight:600;font-display:swap}
+@font-face{font-family:"Onest";src:url(onest-700.woff2) format("woff2");font-weight:700;font-display:swap}
+@font-face{font-family:"Onest";src:url(onest-800.woff2) format("woff2");font-weight:800;font-display:swap}
+@font-face{font-family:"Playfair";src:url(playfair-400i.woff2) format("woff2");font-weight:400;font-style:italic;font-display:swap}
+@font-face{font-family:"Playfair";src:url(playfair-500i.woff2) format("woff2");font-weight:500;font-style:italic;font-display:swap}
+
+:root{
+  --paper:#F5F8FC;--mist:#E8F0F9;--sky:#D6E5F5;--ice:#BFD6EF;--line:#CBD9EA;
+  --ink:#0E1E34;--ink-2:#2E4565;--ink-3:#5C7494;
+  --cobalt:#2559A0;--cobalt-2:#3A75C4;--cobalt-deep:#173F78;--glow:#7FB0EA;
+  --night:#0C1A2E;--night-2:#13253F;--night-line:#24395A;--on-night:#E6EEF8;--on-night-2:#A9BFDB;
+  --warm:#C98A4B;
+  --sans:"Onest",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --accent:"Playfair",Georgia,serif;
+  --ease:cubic-bezier(.23,1,.32,1);
+  --shadow:0 30px 60px -30px rgba(14,30,52,.35);
+  --wrap:1240px;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+html.lenis,html.lenis body{height:auto}
+.lenis.lenis-smooth{scroll-behavior:auto!important}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 19px/1.62 var(--sans);-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;overflow-x:hidden}
+::selection{background:var(--cobalt);color:#fff}
+html{scrollbar-color:var(--ice) var(--paper)}
+img,video,svg{display:block;max-width:100%}
+a{color:var(--cobalt);text-underline-offset:5px;text-decoration-thickness:1px}
+:focus-visible{outline:2px solid var(--cobalt-2);outline-offset:3px;border-radius:8px}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 40px}
+h1,h2,h3{margin:0;font-weight:800;letter-spacing:-.035em;line-height:.98;text-wrap:balance}
+h2{font-size:clamp(42px,6vw,88px)}
+h3{letter-spacing:-.02em;line-height:1.1}
+.it{font-variant-numeric:lining-nums;font-family:var(--accent);font-style:italic;font-weight:500;letter-spacing:-.01em;color:var(--cobalt)}
+p{margin:0 0 1em;text-wrap:pretty}
+.lead{font-size:clamp(19px,1.55vw,22px);line-height:1.55;color:var(--ink-2);max-width:58ch}
+section{position:relative}
+.skip{position:absolute;left:-999px;top:8px;background:var(--ink);color:#fff;padding:10px 16px;border-radius:8px;z-index:100}
+.skip:focus{left:16px}
+.line-mask{display:block;overflow:hidden;padding-bottom:.08em;margin-bottom:-.08em}
+.line-mask>span{display:inline-block}
+
+/* buttons */
+.btn{--bx:0px;--by:0px;position:relative;display:inline-flex;align-items:center;gap:14px;height:62px;padding:0 30px;border-radius:999px;background:var(--cobalt);color:#fff;font:600 17px/1 var(--sans);letter-spacing:-.005em;text-decoration:none;border:0;cursor:pointer;overflow:hidden;isolation:isolate;transform:translate(var(--bx),var(--by));transition:transform .45s var(--ease),box-shadow .3s var(--ease);box-shadow:0 18px 34px -16px rgba(37,89,160,.8)}
+.btn::before{content:"";position:absolute;inset:0;background:var(--cobalt-deep);border-radius:inherit;transform:scaleX(0);transform-origin:left;transition:transform .5s var(--ease);z-index:-1}
+.btn:hover{color:#fff}
+.btn:active{transform:translate(var(--bx),var(--by)) scale(.97)}
+.btn svg{width:20px;height:20px;transition:transform .45s var(--ease)}
+@media (hover:hover){.btn:hover::before{transform:scaleX(1)}.btn:hover svg{transform:translateX(5px) rotate(-45deg)}}
+.btn.light{background:#fff;color:var(--ink);box-shadow:none}
+.btn.light::before{background:var(--sky)}
+.btn.light:hover{color:var(--ink)}
+.note{font-size:16px;color:var(--ink-3)}
+
+/* header */
+header.top{position:fixed;inset:0 0 auto 0;z-index:40;transition:transform .5s var(--ease),background .3s,box-shadow .3s}
+header.top.solid{background:rgba(245,248,252,.82);backdrop-filter:blur(16px) saturate(1.5);-webkit-backdrop-filter:blur(16px) saturate(1.5);box-shadow:0 1px 0 var(--line)}
+header.top.hide{transform:translateY(-100%)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;height:80px}
+.brand{white-space:nowrap;display:flex;align-items:center;gap:12px;font-weight:700;font-size:19px;letter-spacing:-.02em;color:var(--ink);text-decoration:none}
+.brand svg{width:30px;height:30px;color:var(--cobalt)}
+.brand .gr{transform-origin:center;transform-box:fill-box;transition:transform 1s var(--ease)}
+.brand:hover .gr{transform:rotate(90deg)}
+nav.menu{display:flex;gap:34px;align-items:center}
+nav.menu a{position:relative;color:var(--ink-2);text-decoration:none;font-size:16px;font-weight:500}
+nav.menu a:not(.btn)::after{content:"";position:absolute;left:0;right:0;bottom:-6px;height:1.5px;background:var(--cobalt);transform:scaleX(0);transform-origin:right;transition:transform .45s var(--ease)}
+@media (hover:hover){nav.menu a:not(.btn):hover::after{transform:scaleX(1);transform-origin:left}}
+nav.menu .btn{height:48px;padding:0 22px;font-size:15px}
+nav.menu a.btn,nav.menu a.btn:hover{color:#fff}
+
+/* intro loader */
+.loader{position:fixed;inset:0;z-index:90;background:var(--night);display:grid;place-items:center;color:var(--on-night)}
+.loader svg{width:120px;height:120px}
+.loader .g{fill:none;stroke:var(--glow);stroke-width:2}
+.loader p{margin:22px 0 0;font-weight:600;letter-spacing:.02em;text-align:center;font-size:16px;color:var(--on-night-2)}
+.no-js .loader,.reduce .loader{display:none}
+
+/* HERO */
+.hero{min-height:100svh;padding:120px 0 0;overflow:hidden;background:
+  radial-gradient(1200px 700px at 78% 40%,#D3E4F7 0%,rgba(211,228,247,0) 60%),
+  radial-gradient(800px 600px at 10% 90%,#E3EDF9 0%,rgba(227,237,249,0) 70%),var(--paper)}
+.hero .wrap{display:grid;grid-template-columns:1.18fr .82fr;gap:24px;align-items:end;min-height:calc(100svh - 120px)}
+.hero-copy{padding-bottom:110px;position:relative;z-index:3}
+.hero h1{font-size:clamp(44px,5.7vw,94px);margin-bottom:30px}
+.hero h1 .it{font-size:1.04em}
+.hero .lead{margin-bottom:40px}
+.cta-row{display:flex;flex-wrap:wrap;gap:18px 26px;align-items:center}
+.creds{margin-top:48px;display:flex;flex-wrap:wrap;gap:10px}
+.chip{display:inline-flex;align-items:center;gap:10px;padding:10px 16px;border-radius:999px;background:rgba(255,255,255,.7);border:1px solid rgba(203,217,234,.9);font-size:15px;color:var(--ink-2);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
+.chip b{color:var(--ink);font-weight:700}
+.visual{position:relative;height:100%;min-height:640px;align-self:stretch}
+.disc{position:absolute;left:50%;bottom:-18%;width:min(640px,110%);aspect-ratio:1;transform:translateX(-50%);border-radius:50%;background:radial-gradient(circle at 40% 35%,#FFFFFF 0%,#E2EDF9 45%,#C7DBF1 100%);box-shadow:inset 0 -30px 80px rgba(37,89,160,.15)}
+.big-gear{position:absolute;left:50%;bottom:-36%;width:min(980px,170%);transform:translateX(-50%);opacity:.9;pointer-events:none}
+.big-gear .g{fill:none;stroke:var(--cobalt-2);stroke-width:1.2;opacity:.55;vector-effect:non-scaling-stroke}
+.portrait{position:absolute;left:50%;bottom:0;height:min(96%,820px);transform:translateX(-50%);z-index:2;filter:drop-shadow(0 30px 40px rgba(14,30,52,.18))}
+.portrait img{height:100%;width:auto;max-width:none}
+.orbit{position:absolute;z-index:3;display:flex;align-items:center;gap:10px;padding:12px 18px 12px 12px;border-radius:999px;background:rgba(255,255,255,.82);box-shadow:0 18px 40px -20px rgba(14,30,52,.4);font-weight:600;font-size:15px;color:var(--ink);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);white-space:nowrap}
+.orbit svg{width:26px;height:26px;color:var(--cobalt)}
+.orbit.o1{left:-2%;top:24%}.orbit.o2{right:-4%;top:14%}.orbit.o3{right:-2%;top:52%}.orbit.o4{left:2%;top:62%}
+.orbit.o4{background:var(--ink);color:#fff}.orbit.o4 svg{color:var(--warm)}
+.scroll-cue{position:absolute;left:40px;bottom:36px;z-index:3;display:flex;gap:12px;align-items:center;font-size:14px;color:var(--ink-3)}
+.scroll-cue i{width:22px;height:36px;border:1.5px solid var(--ink-3);border-radius:12px;position:relative}
+.scroll-cue i::after{content:"";position:absolute;left:50%;top:7px;width:3px;height:7px;border-radius:2px;background:var(--cobalt);transform:translateX(-50%);animation:cue 1.8s var(--ease) infinite}
+@keyframes cue{0%{opacity:0;transform:translate(-50%,0)}30%{opacity:1}100%{opacity:0;transform:translate(-50%,12px)}}
+
+/* marquee */
+.marquee{background:var(--night);color:var(--on-night);overflow:hidden;padding:30px 0;border-block:1px solid var(--night-line)}
+.mq-track{display:flex;width:max-content;gap:48px;align-items:center;will-change:transform}
+.mq-track span{font-weight:800;font-size:clamp(34px,4.4vw,64px);letter-spacing:-.03em;white-space:nowrap}
+.mq-track span.o{color:transparent;-webkit-text-stroke:1.2px var(--on-night-2)}
+.mq-track svg{width:44px;height:44px;flex:none;color:var(--glow)}
+
+/* pains */
+.pains{padding:160px 0 140px}
+.pains .wrap{display:grid;grid-template-columns:.75fr 1.25fr;gap:72px}
+.pains .side{position:sticky;top:130px;align-self:start}
+.pains h2{font-size:clamp(40px,4.6vw,68px)}
+.pains .side p{margin-top:28px;color:var(--ink-2)}
+.pain{font-size:clamp(28px,3.1vw,46px);line-height:1.18;font-weight:700;letter-spacing:-.025em;padding:30px 0;border-top:1px solid var(--line);color:var(--ink)}
+.pain:last-child{border-bottom:1px solid var(--line)}
+.pain .w{opacity:.14;transition:opacity .25s linear}
+.pain .q{font-family:var(--accent);font-style:italic;font-weight:400;color:var(--cobalt)}
+.no-js .pain .w,.reduce .pain .w{opacity:1}
+
+/* mechanism */
+.mech{background:var(--night);color:var(--on-night);padding:150px 0 140px;overflow:hidden}
+.mech h2{color:#fff;max-width:14ch}
+.mech h2 .it{color:var(--glow)}
+.mech-top{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:end}
+.mech-top .lead{color:var(--on-night-2)}
+.train{margin-top:60px;position:relative}
+.train svg{width:100%;height:auto;overflow:visible}
+.gear-shape{fill:var(--night-2);stroke:var(--glow);stroke-width:1.6;vector-effect:non-scaling-stroke;transition:fill .4s,stroke .4s}
+.gear-hub{fill:var(--night);stroke:var(--glow);stroke-width:1.2;vector-effect:non-scaling-stroke}
+.gear-spoke{stroke:var(--night-line);stroke-width:1.2;vector-effect:non-scaling-stroke}
+.gear{cursor:pointer;outline:none}
+.gear:hover .gear-shape,.gear.on .gear-shape{fill:#1A355A;stroke:#CFE3FB}
+.gear:focus-visible .gear-shape{stroke:#fff;stroke-width:3}
+.gear.stopped .gear-shape{stroke:#5B7396;fill:#101F35}
+.gear.stopped .gear-hub{stroke:#5B7396}
+.gear.stuck .gear-shape{stroke:var(--warm);fill:#2A2216}
+.gear.stuck .gear-hub{stroke:var(--warm)}
+.glabel{font:600 21px var(--sans);fill:var(--on-night);text-anchor:middle;pointer-events:none;letter-spacing:-.01em}
+.glabel.dim{fill:#7F96B6}
+.glabel.warm{fill:#F0C79A}
+.gtag{fill:var(--night);stroke:var(--night-line)}
+.mech-panel{margin-top:48px;display:grid;grid-template-columns:1.2fr .8fr;gap:40px;align-items:start;border-top:1px solid var(--night-line);padding-top:40px}
+.mp-label{font-size:15px;font-weight:600;color:var(--glow);margin-bottom:12px;letter-spacing:.01em}
+.mp-q{font-size:clamp(28px,3vw,44px);font-weight:700;letter-spacing:-.025em;line-height:1.12;color:#fff;min-height:2.3em}
+.mp-hint{color:var(--on-night-2);font-size:18px;margin-bottom:24px}
+.fix{display:inline-flex;align-items:center;gap:12px;height:56px;padding:0 24px;border-radius:999px;border:1.5px solid var(--warm);background:transparent;color:#F7DFC4;font:600 16px var(--sans);cursor:pointer;transition:background .3s var(--ease),color .3s,border-color .3s,transform .3s var(--ease)}
+.fix i{width:10px;height:10px;border-radius:50%;background:var(--warm);box-shadow:0 0 0 0 rgba(201,138,75,.6);animation:ping 1.8s infinite}
+@keyframes ping{0%{box-shadow:0 0 0 0 rgba(201,138,75,.55)}100%{box-shadow:0 0 0 14px rgba(201,138,75,0)}}
+@media (hover:hover){.fix:hover{background:var(--warm);color:var(--night)}}
+.fix:active{transform:scale(.97)}
+.fix.done{border-color:var(--glow);color:var(--on-night)}
+.fix.done i{background:var(--glow);animation:none}
+
+/* steps — horizontal */
+.steps{padding:150px 0 0;overflow:hidden}
+.steps-head{display:flex;justify-content:space-between;align-items:end;gap:40px}
+.steps-head .lead{max-width:40ch}
+.hwrap{margin-top:70px;position:relative}
+.htrack{display:flex;gap:28px;padding:0 40px 140px max(40px,calc((100vw - var(--wrap))/2 + 40px));width:max-content}
+.scard{width:min(440px,78vw);min-height:440px;background:#fff;border-radius:28px;padding:40px;display:flex;flex-direction:column;justify-content:space-between;box-shadow:var(--shadow);position:relative;overflow:hidden}
+.scard .num{font-size:140px;font-weight:800;letter-spacing:-.06em;line-height:.8;color:var(--sky)}
+.scard h3{font-size:36px;margin:22px 0 14px}
+.scard p{color:var(--ink-2);font-size:18px;margin:0}
+.scard.dark{background:var(--cobalt);color:#fff}.scard.dark .num{color:rgba(255,255,255,.22)}.scard.dark p{color:#DCE8F7}
+.hprogress{position:absolute;left:max(40px,calc((100vw - var(--wrap))/2 + 40px));right:40px;bottom:80px;height:2px;background:var(--line);border-radius:2px;overflow:hidden}
+.hprogress i{position:absolute;inset:0;background:var(--cobalt);transform-origin:left;transform:scaleX(0)}
+
+/* cinema */
+.cinema{background:linear-gradient(180deg,var(--paper),var(--mist));padding:150px 0}
+.cinema-head{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:end}
+.screen{margin-top:56px;border-radius:28px;overflow:hidden;background:var(--sky);box-shadow:0 50px 90px -40px rgba(14,30,52,.5);aspect-ratio:16/9;position:relative}
+.screen video{width:100%;height:100%;object-fit:cover;background:var(--sky)}
+.thumbs{margin-top:22px;display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.thumb{all:unset;cursor:pointer;display:flex;flex-direction:column;gap:10px;border-radius:18px;padding:8px;transition:background .3s var(--ease),transform .4s var(--ease)}
+.thumb .tv{position:relative;aspect-ratio:16/9;border-radius:12px;overflow:hidden;background:var(--sky)}
+.thumb img,.thumb video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .7s var(--ease)}
+.thumb video{opacity:0;transition:opacity .35s}
+.thumb .ti{display:flex;gap:10px;font-size:15px;line-height:1.35;font-weight:600;color:var(--ink);padding:0 4px}
+.thumb .ti span{color:var(--cobalt);font-variant-numeric:tabular-nums}
+.thumb .ti em{margin-left:auto;font-style:normal;font-weight:500;color:var(--ink-3);font-variant-numeric:tabular-nums}
+.thumb[aria-current="true"]{background:#fff;box-shadow:0 20px 40px -26px rgba(14,30,52,.45)}
+@media (hover:hover){.thumb:hover{transform:translateY(-4px)}.thumb:hover img{transform:scale(1.05)}.thumb:hover video{opacity:1}}
+.thumb:focus-visible{outline:2px solid var(--cobalt-2)}
+
+/* results */
+.results{padding:150px 0}
+.rgrid{margin-top:64px;display:grid;grid-template-columns:repeat(2,1fr);gap:0 64px}
+.r{padding:40px 0;border-top:1px solid var(--line)}
+.r .big{font-size:clamp(56px,6.6vw,104px);font-weight:800;letter-spacing:-.05em;line-height:.95;color:var(--cobalt);font-variant-numeric:tabular-nums}
+.r .big small{font-size:.42em;letter-spacing:-.02em;color:var(--ink);font-weight:700}
+.r h3{font-size:24px;margin:18px 0 8px;letter-spacing:-.015em}
+.r p{color:var(--ink-2);font-size:17px;margin:0;max-width:44ch}
+.fine{margin-top:26px;font-size:15px;color:var(--ink-3);max-width:70ch}
+
+/* ladder */
+.ladder-sec{background:var(--mist);padding:150px 0;overflow:hidden}
+.ladder{position:relative;margin-top:70px;display:grid;grid-template-columns:repeat(3,1fr);gap:24px;align-items:end;perspective:1400px}
+.stairs{position:absolute;inset:0;pointer-events:none;z-index:0}
+.stairs path{fill:none;stroke:var(--cobalt-2);stroke-width:2;stroke-dasharray:6 8;opacity:.6}
+.rung{position:relative;z-index:1;background:#fff;border-radius:28px;padding:38px 34px 34px;box-shadow:var(--shadow);display:flex;flex-direction:column;transform-style:preserve-3d;transition:transform .5s var(--ease),box-shadow .5s var(--ease)}
+.rung:nth-child(2){min-height:430px}.rung:nth-child(3){min-height:520px}.rung:nth-child(4){min-height:640px;background:var(--night);color:var(--on-night)}
+.rung .step{display:inline-flex;align-self:flex-start;padding:6px 12px;border-radius:999px;background:var(--mist);color:var(--cobalt);font-size:14px;font-weight:700;margin-bottom:18px}
+.rung:nth-child(4) .step{background:var(--night-2);color:var(--glow)}
+.rung .meta{font-size:15px;color:var(--ink-3);margin-bottom:10px}
+.rung:nth-child(4) .meta{color:var(--on-night-2)}
+.rung h3{font-size:34px;margin-bottom:14px}
+.rung:nth-child(4) h3{color:#fff}
+.rung p{font-size:17px;color:var(--ink-2)}
+.rung:nth-child(4) p{color:var(--on-night-2)}
+.price{margin-top:auto;padding-top:22px;border-top:1px solid var(--line);font-size:30px;font-weight:800;letter-spacing:-.03em}
+.rung:nth-child(4) .price{border-color:var(--night-line);color:#fff}
+.price small{display:block;font-size:14px;font-weight:500;letter-spacing:0;color:var(--ink-3);margin-top:4px}
+.rung:nth-child(4) .price small{color:var(--on-night-2)}
+.months{margin:16px 0 26px;display:grid;gap:10px}
+.months div{display:grid;grid-template-columns:78px 1fr;gap:10px;font-size:15px;line-height:1.45;color:var(--on-night-2)}
+.months b{color:#fff;font-weight:700}
+.ladder-cta{margin-top:50px;display:flex;gap:24px;align-items:center;flex-wrap:wrap}
+
+/* about */
+.about{padding:150px 0 0;overflow:hidden;position:relative}
+.ghost{position:absolute;top:110px;left:0;white-space:nowrap;font-weight:800;font-size:clamp(120px,19vw,300px);letter-spacing:-.06em;line-height:1;color:transparent;-webkit-text-stroke:1.5px var(--ice);pointer-events:none;will-change:transform}
+.about .wrap{position:relative;display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;align-items:end}
+.about-vis{position:relative;height:720px}
+.about-vis .disc{bottom:-30%;width:120%}
+.about-vis img{position:absolute;left:50%;bottom:0;height:96%;width:auto;max-width:none;transform:translateX(-50%);filter:drop-shadow(0 30px 40px rgba(14,30,52,.18))}
+.about-copy{padding-bottom:110px}
+.about-copy p{color:var(--ink-2);max-width:56ch}
+.facts{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin:30px 0}
+.fact{background:#fff;border-radius:18px;padding:18px 20px;font-size:16px;line-height:1.4;color:var(--ink-2);box-shadow:0 14px 30px -24px rgba(14,30,52,.5)}
+.fact b{display:block;color:var(--ink);font-size:18px;margin-bottom:2px}
+blockquote{margin:30px 0 0;font-family:var(--accent);font-style:italic;font-size:clamp(28px,2.8vw,40px);line-height:1.2;color:var(--cobalt)}
+blockquote cite{display:block;margin-top:10px;font:500 15px var(--sans);font-style:normal;color:var(--ink-3)}
+
+/* not-do */
+.nodo{background:var(--night);color:var(--on-night);padding:150px 0}
+.nodo h2{color:#fff}
+.nlist{margin-top:60px}
+.n{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:baseline;padding:34px 0;border-top:1px solid var(--night-line)}
+.n:last-child{border-bottom:1px solid var(--night-line)}
+.n .s{position:relative;justify-self:start;font-size:clamp(28px,3.2vw,46px);font-weight:700;letter-spacing:-.03em;line-height:1.1;color:#fff}
+.n .s::after{content:"";position:absolute;left:-2%;right:-2%;top:54%;height:3px;border-radius:3px;background:var(--warm);transform:scaleX(var(--k,0));transform-origin:left}
+.n p{color:var(--on-night-2);font-size:18px;margin:0}
+
+/* faq */
+.faq{padding:150px 0}
+.faq .wrap{display:grid;grid-template-columns:.8fr 1.2fr;gap:64px}
+.qa{border-top:1px solid var(--line)}
+.qa:last-child{border-bottom:1px solid var(--line)}
+.qa button{all:unset;box-sizing:border-box;width:100%;cursor:pointer;display:flex;justify-content:space-between;gap:24px;align-items:center;padding:28px 0;font-size:20px;font-weight:700;letter-spacing:-.015em;color:var(--ink)}
+.qa button:focus-visible{outline:2px solid var(--cobalt-2);outline-offset:4px;border-radius:8px}
+.qa .pm{flex:none;width:40px;height:40px;border-radius:50%;background:var(--mist);position:relative;transition:background .3s,transform .5s var(--ease)}
+.qa .pm::before,.qa .pm::after{content:"";position:absolute;left:50%;top:50%;width:14px;height:2px;background:var(--cobalt);border-radius:2px;transform:translate(-50%,-50%)}
+.qa .pm::after{transform:translate(-50%,-50%) rotate(90deg);transition:transform .5s var(--ease)}
+.qa.open .pm{background:var(--cobalt);transform:rotate(180deg)}
+.qa.open .pm::before,.qa.open .pm::after{background:#fff}
+.qa.open .pm::after{transform:translate(-50%,-50%) rotate(0)}
+.qa .ans{display:grid;grid-template-rows:0fr;transition:grid-template-rows .55s var(--ease)}
+.qa.open .ans{grid-template-rows:1fr}
+.qa .ans>div{overflow:hidden}
+.qa .ans p{color:var(--ink-2);padding:0 64px 28px 0;margin:0;max-width:64ch}
+
+/* final */
+.final{background:var(--night);color:var(--on-night);padding:160px 0 50px;overflow:hidden;position:relative}
+.final h2{color:#fff;font-size:clamp(56px,9vw,150px);letter-spacing:-.05em}
+.final h2 .it{color:var(--glow)}
+.final .grid{position:relative;z-index:2;display:grid;grid-template-columns:1.25fr .75fr;gap:56px;align-items:end}
+.final .lead{color:var(--on-night-2);margin-top:30px}
+.contacts{display:grid;gap:18px;font-size:18px}
+.contacts a{color:#fff;text-decoration-color:rgba(255,255,255,.35)}
+.contacts .k{display:block;font-size:13px;color:var(--on-night-2);margin-bottom:2px}
+.final-gear{position:absolute;right:-180px;top:-140px;width:640px;opacity:.18;pointer-events:none}
+.final-gear .g{fill:none;stroke:var(--glow);stroke-width:1.4;vector-effect:non-scaling-stroke}
+footer{position:relative;z-index:2;margin-top:110px;padding-top:28px;border-top:1px solid var(--night-line);display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-size:13px;color:#8DA4C2}
+
+
+/* team outsourcing */
+.team{background:var(--mist);padding:150px 0;overflow:hidden}
+.team .wrap{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+.team h2{font-size:clamp(40px,4.6vw,68px)}
+.team .lead{margin-top:28px}
+.why{margin-top:40px;display:grid;gap:0}
+.why div{display:grid;grid-template-columns:46px 1fr;gap:16px;padding:20px 0;border-top:1px solid var(--line)}
+.why div:last-child{border-bottom:1px solid var(--line)}
+.why svg{width:30px;height:30px;color:var(--cobalt);margin-top:3px}
+.why b{display:block;font-size:20px;letter-spacing:-.015em;color:var(--ink);margin-bottom:2px}
+.why span{font-size:17px;color:var(--ink-2);line-height:1.5}
+.org{position:relative;aspect-ratio:1;max-width:600px;width:100%;justify-self:center}
+.org svg.links{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
+.org svg.links line{stroke:var(--ice);stroke-width:2;stroke-dasharray:6 7}
+.org svg.links line.on{stroke:var(--cobalt);stroke-dasharray:none}
+.core{position:absolute;left:50%;top:50%;width:34%;aspect-ratio:1;transform:translate(-50%,-50%);border-radius:50%;background:var(--night);color:#fff;display:grid;place-items:center;text-align:center;font-weight:700;font-size:clamp(15px,1.4vw,19px);line-height:1.25;box-shadow:0 30px 60px -30px rgba(14,30,52,.6);padding:12px}
+.core small{display:block;font-weight:500;color:var(--on-night-2);font-size:.78em;margin-top:4px}
+.seat{position:absolute;width:40%;transform:translate(-50%,-50%);background:rgba(255,255,255,.55);border:1.5px dashed var(--ice);border-radius:20px;padding:14px 14px 14px 12px;display:flex;gap:12px;align-items:center;transition:background .6s var(--ease),border-color .6s var(--ease),box-shadow .6s var(--ease)}
+.seat .av{flex:none;width:46px;height:46px;border-radius:50%;background:var(--mist) center/cover;border:2px dashed var(--ice);transition:border-color .6s,transform .7s var(--ease)}
+.seat .av img{width:100%;height:100%;border-radius:50%;object-fit:cover;opacity:0;transform:scale(.6);transition:opacity .5s,transform .7s var(--ease)}
+.seat b{display:block;font-size:15px;letter-spacing:-.01em;line-height:1.2;color:var(--ink)}
+.seat span{display:block;font-size:13px;line-height:1.35;color:var(--ink-3);margin-top:2px}
+.seat .who{color:var(--cobalt);font-weight:600;opacity:0;transition:opacity .5s .2s}
+.seat.filled{background:#fff;border:1.5px solid transparent;box-shadow:0 20px 40px -24px rgba(14,30,52,.45)}
+.seat.filled .av{border:2px solid var(--cobalt)}
+.seat.filled .av img{opacity:1;transform:none}
+.seat.filled .who{opacity:1}
+.no-js .seat,.reduce .seat{background:#fff;border-style:solid}
+.no-js .seat .av img,.reduce .seat .av img,.no-js .seat .who,.reduce .seat .who{opacity:1;transform:none}
+
+/* audience */
+.aud{padding:150px 0}
+.aud-head{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:end}
+.panels{margin-top:60px;display:flex;gap:18px;height:540px}
+.pan{position:relative;flex:1;min-width:0;border-radius:28px;overflow:hidden;padding:36px;display:flex;flex-direction:column;justify-content:flex-end;color:#fff;cursor:default;transition:flex-grow .8s var(--ease)}
+.pan:nth-child(1){background:linear-gradient(160deg,#3A75C4,#173F78)}
+.pan:nth-child(2){background:linear-gradient(160deg,#21406B,#0C1A2E)}
+.pan:nth-child(3){background:linear-gradient(160deg,#5B8FD0,#2559A0)}
+@media (hover:hover){.panels:hover .pan{flex-grow:.8}.panels .pan:hover{flex-grow:1.9}}
+.pan .bg-gear{position:absolute;right:-90px;top:-90px;width:320px;opacity:.18;transition:transform 1.4s var(--ease)}
+.pan .bg-gear path{fill:none;stroke:#fff;stroke-width:2}
+@media (hover:hover){.pan:hover .bg-gear{transform:rotate(60deg)}}
+.pan .tag{position:relative;align-self:flex-start;margin-bottom:auto;font-size:14px;font-weight:600;padding:7px 12px;border-radius:999px;background:rgba(255,255,255,.16)}
+.pan h3{font-size:clamp(28px,2.6vw,38px);color:#fff;margin-bottom:12px}
+.pan .who{font-size:16px;color:#DCE8F7;margin-bottom:14px;font-weight:600}
+.pan h3{margin-top:28px}
+.pan p{font-size:16px;line-height:1.5;color:#DCE8F7;margin:0;max-width:46ch}
+.pan .ex{font-variant-numeric:lining-nums;margin-top:16px;font-family:var(--accent);font-style:italic;font-size:19px;color:#fff;opacity:.92}
+@media (max-width:1020px){
+  .team .wrap,.aud-head{grid-template-columns:1fr}
+  .org{max-width:520px}
+  .panels{flex-direction:column;height:auto}
+  .pan{min-height:380px}
+}
+@media (max-width:560px){
+  .org{aspect-ratio:auto;display:flex;flex-direction:column;gap:12px}
+  .org svg.links{display:none}
+  .core{position:static;transform:none;width:auto;aspect-ratio:auto;border-radius:20px;padding:20px}
+  .seat{position:static;transform:none;width:auto}
+}
+
+
+/* what you get */
+.get{padding:150px 0;background:linear-gradient(180deg,var(--paper),var(--mist))}
+.get .wrap{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center}
+.get h2{font-size:clamp(40px,4.8vw,72px)}
+.gl{margin:40px 0 0;padding:0;list-style:none;counter-reset:g}
+.gl li{display:grid;grid-template-columns:56px 1fr;gap:18px;padding:22px 0;border-top:1px solid var(--line)}
+.gl li:last-child{border-bottom:1px solid var(--line)}
+.gl .n{align-self:start;width:46px;height:46px;line-height:1;border-radius:50%;background:var(--cobalt);color:#fff;display:grid;place-items:center;font-weight:800;font-size:18px}
+.gl b{display:block;font-size:21px;letter-spacing:-.015em;margin-bottom:4px}
+.gl span{color:var(--ink-2);font-size:17px;line-height:1.5}
+.notfor{margin-top:26px;font-size:16px;color:var(--ink-3)}
+.notfor b{color:var(--ink-2)}
+.mapdoc{position:relative;background:#fff;border-radius:24px;padding:36px 36px 30px;box-shadow:0 50px 90px -40px rgba(14,30,52,.45);transform:rotate(-1.6deg)}
+.mapdoc .hd{display:flex;justify-content:space-between;align-items:flex-start;gap:16px;padding-bottom:18px;border-bottom:1px solid var(--line)}
+.mapdoc .hd b{font-size:24px;letter-spacing:-.02em}
+.mapdoc .hd small{display:block;font-size:14px;color:var(--ink-3);margin-top:2px}
+.mapdoc .ex{font-size:12px;font-weight:700;letter-spacing:.06em;color:var(--cobalt);background:var(--mist);padding:6px 10px;border-radius:999px;white-space:nowrap}
+.rows{margin:10px 0 0;padding:0;list-style:none}
+.rows li{display:flex;align-items:center;gap:14px;padding:11px 0;border-bottom:1px dashed var(--line);font-size:17px;font-weight:600}
+.rows li .st{margin-left:auto;display:flex;align-items:center;gap:8px;font-size:14px;font-weight:500;color:var(--ink-3)}
+.rows li .d{width:14px;height:14px;border-radius:50%;border:2px solid var(--ice);transition:background .5s var(--ease),border-color .5s,transform .5s var(--ease)}
+.rows li.ok .d{background:var(--cobalt);border-color:var(--cobalt)}
+.rows li.q .d{background:#fff;border-color:var(--cobalt-2);box-shadow:inset 0 0 0 3px #fff,inset 0 0 0 10px var(--sky)}
+.rows li.bad .d{background:var(--warm);border-color:var(--warm)}
+.rows li .lbl{opacity:0;transition:opacity .4s}
+.rows li.ok .lbl,.rows li.q .lbl,.rows li.bad .lbl{opacity:1}
+.gapbox{margin-top:18px;border-radius:16px;background:#FBF3EA;padding:16px 18px;font-size:16px;line-height:1.45;color:#5E3F1E}
+.gapbox b{color:#8A5A28}
+.stepbox{margin-top:12px;border-radius:16px;background:var(--mist);padding:16px 18px;font-size:16px;line-height:1.45;color:var(--ink-2)}
+.stepbox b{color:var(--cobalt)}
+.sig{margin-top:18px;display:flex;justify-content:space-between;align-items:center;font-size:14px;color:var(--ink-3)}
+.sig i{font-family:var(--accent);font-size:22px;color:var(--ink)}
+.stamp{position:absolute;right:-22px;bottom:70px;width:112px;height:112px;border-radius:50%;border:2px solid var(--cobalt);color:var(--cobalt);display:grid;place-items:center;text-align:center;font-size:13px;font-weight:800;letter-spacing:.06em;line-height:1.2;background:rgba(245,248,252,.9);transform:rotate(12deg)}
+.anim .gapbox,.anim .stepbox{opacity:0;transform:translateY(16px)}
+@media (max-width:1020px){.get .wrap{grid-template-columns:1fr}.mapdoc{transform:none}}
+@media (max-width:560px){.mapdoc{padding:26px 20px}.stamp{width:88px;height:88px;font-size:11px;right:-6px;bottom:60px}.rows li{font-size:15px}}
+
+
+/* sound overlay */
+.play-ov{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);display:flex;align-items:center;gap:18px;padding:16px 26px 16px 18px;border:0;border-radius:999px;background:rgba(255,255,255,.88);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);box-shadow:0 24px 50px -24px rgba(14,30,52,.55);cursor:pointer;font-family:var(--sans);color:var(--ink);text-align:left;transition:opacity .4s var(--ease),transform .5s var(--ease)}
+.play-ov .pl{width:54px;height:54px;border-radius:50%;background:var(--cobalt);display:grid;place-items:center;flex:none;transition:transform .4s var(--ease)}
+.play-ov .pl svg{width:22px;height:22px;margin-left:3px}
+@media (hover:hover){.play-ov:hover .pl{transform:scale(1.08)}}
+.play-ov b{display:block;font-size:18px;letter-spacing:-.01em}
+.play-ov small{display:block;font-size:14px;color:var(--ink-3)}
+.eq{display:flex;align-items:center;gap:4px;height:30px}
+.eq i{display:block;width:4px;height:100%;border-radius:4px;background:var(--cobalt);transform-origin:center;animation:eq 1.1s var(--ease) infinite}
+.eq i:nth-child(2){animation-delay:-.2s}.eq i:nth-child(3){animation-delay:-.45s}.eq i:nth-child(4){animation-delay:-.7s}.eq i:nth-child(5){animation-delay:-.9s}.eq i:nth-child(6){animation-delay:-.35s}.eq i:nth-child(7){animation-delay:-.6s}
+@keyframes eq{0%,100%{transform:scaleY(.25)}50%{transform:scaleY(1)}}
+.screen.playing .play-ov{opacity:0;pointer-events:none;transform:translate(-50%,-40%)}
+.thumb .eqmini{display:none;gap:2px;align-items:center;height:14px;margin-left:6px}
+.thumb .eqmini i{display:block;width:3px;height:100%;border-radius:2px;background:var(--cobalt);animation:eq 1s var(--ease) infinite}
+.thumb .eqmini i:nth-child(2){animation-delay:-.3s}.thumb .eqmini i:nth-child(3){animation-delay:-.6s}
+.screen.playing~.thumbs .thumb[aria-current="true"] .eqmini{display:inline-flex}
+.sound-note{display:inline-flex;align-items:center;gap:10px;margin-top:18px;font-size:15px;color:var(--ink-3)}
+@media (max-width:560px){.play-ov b{white-space:nowrap}.play-ov .eq{display:none}.play-ov{padding:10px 16px 10px 10px;gap:12px}.play-ov .pl{width:42px;height:42px}.play-ov b{font-size:15px}.play-ov small{display:none}.eq{height:22px}}
+
+/* initial states for JS animation (only when motion allowed) */
+.anim .reveal{opacity:0;transform:translateY(40px)}
+
+@media (max-width:1020px){
+  body{font-size:18px}
+  .wrap{padding:0 24px}
+  nav.menu a:not(.btn){display:none}
+  .hero{padding-top:100px}
+  .hero .wrap{grid-template-columns:1fr;min-height:0}
+  .hero-copy{padding-bottom:20px}
+  .visual{min-height:560px;margin:0 -24px}
+  .orbit{font-size:14px;padding:9px 14px 9px 10px}
+  .orbit svg{width:22px;height:22px}
+  .scroll-cue{display:none}
+  .pains .wrap,.mech-top,.mech-panel,.cinema-head,.about .wrap,.faq .wrap,.final .grid{grid-template-columns:1fr}
+  .pains .side{position:static}
+  .htrack{flex-direction:column;width:auto;padding:0 24px 120px}
+  .scard{width:auto;min-height:0}
+  .scard .num{font-size:96px}
+  .hprogress{display:none}
+  .thumbs{grid-template-columns:repeat(2,1fr)}
+  .rgrid{grid-template-columns:1fr}
+  .ladder{grid-template-columns:1fr}
+  .rung:nth-child(n){min-height:0}
+  .stairs{display:none}
+  .about-vis{height:560px;order:2}
+  .about-copy{padding-bottom:20px}
+  .n{grid-template-columns:1fr;gap:12px}
+  .steps-head{flex-direction:column;align-items:flex-start;gap:20px}
+  .ghost{top:60px}
+}
+@media (max-width:560px){
+  .btn{width:100%;justify-content:center}
+  nav.menu .btn{width:auto}
+  .orbit.o1{left:4%}.orbit.o2{right:2%}.orbit.o3{right:2%}.orbit.o4{left:4%}
+  .facts{grid-template-columns:1fr}
+  .thumbs{grid-template-columns:1fr 1fr;gap:10px}
+  .thumb .ti{font-size:13px}
+  .thumb .ti em{display:none}
+  .qa .ans p{padding-right:8px}
+  .glabel{font-size:30px}
+}
+
+@media (max-width:700px){
+  .pains,.mech,.steps,.cinema,.results,.ladder-sec,.nodo,.faq,.get,.aud,.team{padding-top:96px;padding-bottom:96px}
+  .steps{padding-bottom:0}
+  .about{padding-top:96px}
+  .final{padding-top:110px}
+  .htrack{padding-bottom:80px}
+  h2{letter-spacing:-.03em}
+  .btn{font-size:16px;padding:0 22px;height:58px}
+  .cinema .lead{font-size:18px}
+  .screen{border-radius:20px}
+  .pan{padding:28px}
+}
+@media (max-width:400px){.brand{font-size:16px;gap:8px}.brand svg{width:24px;height:24px}nav.menu .btn{padding:0 14px;height:42px;font-size:14px}.top .wrap{height:68px}}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition-duration:.01ms!important}
+}
+</style>
+</head>
+<body class="no-js">
+<script>document.body.classList.remove('no-js');if(matchMedia('(prefers-reduced-motion: reduce)').matches)document.body.classList.add('reduce');</script>
+<a class="skip" href="#main">Перейти к содержанию</a>
+
+<div class="loader" id="loader" aria-hidden="true">
+  <div><svg viewBox="0 0 120 120"><path class="g" id="ldGear"/></svg><p>Наталья Исакова</p></div>
+</div>
+
+<header class="top" id="hdr">
+  <div class="wrap">
+    <a class="brand" href="#main" aria-label="Наталья Исакова, в начало">
+      <svg viewBox="0 0 30 30" aria-hidden="true"><path class="gr" id="brandGear" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>
+      Наталья Исакова
+    </a>
+    <nav class="menu" aria-label="Разделы">
+      <a href="#get">Первый созвон</a>
+      <a href="#method">Механизм</a>
+      <a href="#stories">Истории</a>
+      <a href="#team">Команда</a>
+      <a href="#formats">Форматы</a>
+      <a href="#about">Обо мне</a>
+      <a class="btn magnetic" href="https://t.me/expert_isakova" target="_blank" rel="noopener">Записаться</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+<!-- HERO -->
+<section class="hero" aria-labelledby="h1">
+  <div class="wrap">
+    <div class="hero-copy">
+      <h1 id="h1">
+        <span class="line-mask"><span>Найдём, какая</span></span>
+        <span class="line-mask"><span>шестерёнка в&nbsp;вашем</span></span>
+        <span class="line-mask"><span>бизнесе <span class="it">не&nbsp;сцепляется</span></span></span>
+      </h1>
+      <p class="lead hero-fade">Я бизнес-консультант, кандидат экономических наук. Помогаю специалистам помогающих профессий, самозанятым и&nbsp;владельцам небольшого бизнеса собрать продукт, деньги, время и&nbsp;команду в&nbsp;систему, которая держится не&nbsp;только на&nbsp;вас.</p>
+      <div class="cta-row hero-fade">
+        <a class="btn magnetic" href="https://t.me/expert_isakova" target="_blank" rel="noopener">Получить карту своего дела
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <span class="note">Бесплатный созвон · 30 минут · онлайн</span>
+      </div>
+      <div class="creds hero-fade">
+        <span class="chip"><b>к.э.н.</b> финансовые модели</span>
+        <span class="chip"><b>20+ лет</b> навожу порядок в бизнесе</span>
+        <span class="chip">коуч <b>ICU</b></span>
+      </div>
+    </div>
+    <div class="visual" id="visual">
+      <div class="disc" id="heroDisc"></div>
+      <svg class="big-gear" id="heroGear" viewBox="0 0 1000 1000" aria-hidden="true"><path class="g" id="hgPath"/><circle cx="500" cy="500" r="120" fill="none" stroke="#3A75C4" stroke-opacity=".35"/></svg>
+      <div class="portrait" id="portrait"><img src="cut_hero.webp" alt="Наталья Исакова в светлом костюме" width="610" height="1130" fetchpriority="high"></div>
+      <div class="orbit o1" data-depth="18"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="4"/><path d="M4 10h16"/></svg>Продукт</div>
+      <div class="orbit o2" data-depth="-24"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="8"/><path d="M12 7v5l3 2"/></svg>Время</div>
+      <div class="orbit o3" data-depth="14"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 18l5-6 4 3 7-9"/><path d="M15 6h5v5"/></svg>Деньги</div>
+      <div class="orbit o4" data-depth="-16"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="8"/><path d="M8 12h8"/></svg>Где не сцепляется?</div>
+    </div>
+  </div>
+  <div class="scroll-cue" aria-hidden="true"><i></i>Листайте</div>
+</section>
+
+<!-- MARQUEE -->
+<div class="marquee" aria-hidden="true"><div class="mq-track" id="mq"></div></div>
+
+<!-- PAINS -->
+<section class="pains" aria-labelledby="h-pains">
+  <div class="wrap">
+    <div class="side">
+      <h2 id="h-pains" class="reveal">Ко&nbsp;мне приходят, когда звучит <span class="it">это</span></h2>
+      <p class="reveal">Дело редко в лени или мотивации. Чаще части бизнеса существуют отдельно: продукт сам по себе, цена сама по себе, время само по себе. Моя работа — увидеть, где они не&nbsp;сцепляются.</p>
+    </div>
+    <div class="plist">
+      <p class="pain" data-words>«Делаю много, но непонятно, что на самом деле приносит <span class="q">результат</span>»</p>
+      <p class="pain" data-words>«Не понимаю, какой продукт сделать <span class="q">основным</span>»</p>
+      <p class="pain" data-words>«Клиенты есть, но при росте я перестану <span class="q">справляться</span>»</p>
+      <p class="pain" data-words>«Нужны сайт и контент, но сначала надо понять, что <span class="q">продавать</span>»</p>
+      <p class="pain" data-words>«Хочу работать стабильнее — в режиме, который мне <span class="q">подходит</span>»</p>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- WHAT YOU GET -->
+<section class="get" id="get" aria-labelledby="h-get">
+  <div class="wrap">
+    <div>
+      <h2 id="h-get" class="reveal">За 30 минут вы уйдёте <span class="it">с&nbsp;картой своего дела</span></h2>
+      <p class="lead reveal" style="margin-top:24px">Не «давайте познакомимся» и не продажа под видом консультации. Это рабочий созвон, после которого у вас на руках остаётся результат.</p>
+      <ol class="gl">
+        <li class="reveal"><span class="n">1</span><p><b>Карта вашего дела на одной странице</b><span>8 частей — от смыслов до команды: что уже работает, что под вопросом, что тормозит.</span></p></li>
+        <li class="reveal"><span class="n">2</span><p><b>Главный разрыв</b><span>Одна «шестерёнка», которая сейчас мешает всему остальному, — названная простыми словами.</span></p></li>
+        <li class="reveal"><span class="n">3</span><p><b>Шаг на ближайшие 7 дней</b><span>Конкретное действие, которое можно сделать самому — без покупки чего-либо.</span></p></li>
+        <li class="reveal"><span class="n">4</span><p><b>Честный ответ</b><span>Нужна ли вам вообще помощь — или вы справитесь сами. Если справитесь, я так и скажу.</span></p></li>
+      </ol>
+      <p class="notfor reveal"><b>Не подойдёт,</b> если вы ищете мотивацию или готовую схему «как быстро заработать». Я про порядок в деле.</p>
+      <div class="cta-row reveal" style="margin-top:30px">
+        <a class="btn magnetic" href="https://t.me/expert_isakova" target="_blank" rel="noopener">Получить карту своего дела
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <span class="note">Бесплатно · 30 минут · онлайн</span>
+      </div>
+    </div>
+    <div class="mapdoc" id="mapdoc" aria-label="Пример карты дела">
+      <div class="stamp" id="stamp" aria-hidden="true">ВАША<br>КАРТА<br>ДЕЛА</div>
+      <div class="hd"><div><b>Карта вашего дела</b><small>после созвона с Натальей Исаковой</small></div><span class="ex">ПРИМЕР</span></div>
+      <ul class="rows" id="rows">
+        <li data-s="ok">Смысл и цель<span class="st"><span class="lbl">работает</span><span class="d"></span></span></li>
+        <li data-s="ok">Продукт<span class="st"><span class="lbl">работает</span><span class="d"></span></span></li>
+        <li data-s="q">Цена и деньги<span class="st"><span class="lbl">под вопросом</span><span class="d"></span></span></li>
+        <li data-s="ok">Клиенты<span class="st"><span class="lbl">работает</span><span class="d"></span></span></li>
+        <li data-s="bad">Время<span class="st"><span class="lbl">тормозит</span><span class="d"></span></span></li>
+        <li data-s="q">Процессы<span class="st"><span class="lbl">под вопросом</span><span class="d"></span></span></li>
+        <li data-s="q">Команда<span class="st"><span class="lbl">под вопросом</span><span class="d"></span></span></li>
+        <li data-s="q">Продвижение<span class="st"><span class="lbl">под вопросом</span><span class="d"></span></span></li>
+      </ul>
+      <div class="gapbox"><b>Главный разрыв:</b> клиенты ↔ время. Цель — 10 клиентов, а в текущем формате они не помещаются в рабочую неделю.</div>
+      <div class="stepbox"><b>Шаг на 7 дней:</b> посчитать, сколько часов в неделю на самом деле занимает один клиент.</div>
+      <div class="sig"><span>Карта остаётся у вас</span><i>Наталья Исакова</i></div>
+    </div>
+  </div>
+</section>
+
+<!-- AUDIENCE -->
+<section class="aud" id="who" aria-labelledby="h-aud">
+  <div class="wrap">
+    <div class="aud-head">
+      <h2 id="h-aud" class="reveal">С кем я <span class="it">работаю</span></h2>
+      <p class="lead reveal">Три разных мира, один подход: сначала увидеть, как части дела связаны, потом выстроить порядок.</p>
+    </div>
+    <div class="panels">
+      <article class="pan reveal"><svg class="bg-gear" viewBox="0 0 320 320" aria-hidden="true"><path data-gear="160,160,150,16,18"/></svg><span class="tag">Помогающие профессии</span>
+        <h3>Вы умеете помогать людям</h3><div class="who">Психологи, коучи, нутрициологи, педагоги, специалисты по телу и здоровью</div>
+        <p>Но продукт, цена и нагрузка собраны «как получилось». Соберём линейку из того, что вы уже умеете, посчитаем, сколько клиентов помещается в вашу неделю, и упакуем так, чтобы было понятно, за что платить.</p>
+        <div class="ex">«10 клиентов в 10 часов не помещались — пересобрали формат групп»</div></article>
+      <article class="pan reveal"><svg class="bg-gear" viewBox="0 0 320 320" aria-hidden="true"><path data-gear="160,160,150,12,20"/></svg><span class="tag">Специалисты и самозанятые</span>
+        <h3>Дело держится на вас</h3><div class="who">Мастера, студии, эксперты, частные практики</div>
+        <p>Клиенты есть, но рост упирается в ваше время. Разбираем продукты, цены и точку входа, чтобы зарабатывать стабильнее в режиме, который вам подходит.</p>
+        <div class="ex">«Арт-студия переупаковала мастер-классы — и вышла в торговые центры»</div></article>
+      <article class="pan reveal"><svg class="bg-gear" viewBox="0 0 320 320" aria-hidden="true"><path data-gear="160,160,150,20,16"/></svg><span class="tag">Бизнес с командой</span>
+        <h3>Команда есть, системы нет</h3><div class="who">Строительство, производство, агентства, юридические практики</div>
+        <p>Процессы, роли и ритм работы: кто что делает, где лишнее движение и что передать, чтобы собственник вышел из операционки.</p>
+        <div class="ex">«Сборку модульных домов сняли на видео и увидели лишние движения»</div></article>
+    </div>
+  </div>
+</section>
+
+<!-- MECHANISM -->
+<section class="mech" id="method" aria-labelledby="h-mech">
+  <div class="wrap">
+    <div class="mech-top">
+      <h2 id="h-mech" class="reveal">Бизнес — это механизм. <span class="it">Одна шестерёнка</span> — и&nbsp;всё стоит</h2>
+      <p class="lead reveal">Нажмите на любую часть — это вопросы, с которых я начинаю. А теперь посмотрите на «Время»: оно не сцеплено с «Клиентами», и вся вторая половина механизма стоит.</p>
+    </div>
+    <div class="train" id="train">
+      <svg id="trainSvg" role="group" aria-label="Механизм из восьми шестерёнок: части бизнеса"></svg>
+    </div>
+    <div class="mech-panel">
+      <div aria-live="polite">
+        <div class="mp-label" id="mpLabel">Время</div>
+        <div class="mp-q" id="mpQ">Сколько клиентов на самом деле помещается в вашу неделю?</div>
+      </div>
+      <div>
+        <p class="mp-hint" id="mpHint">Цель — 10 клиентов на групповых консультациях, а в 10 часов в неделю они не помещаются. Пока не пересоберёшь формат, план продаж не сработает.</p>
+        <button class="fix" id="fixBtn" type="button" aria-pressed="false"><i></i><span>Сцепить «Время» с «Клиентами»</span></button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STEPS -->
+<section class="steps" aria-labelledby="h-steps">
+  <div class="wrap steps-head">
+    <h2 id="h-steps" class="reveal">Как я <span class="it">работаю</span></h2>
+    <p class="lead reveal">Пять шагов — от вашей задачи до работающего решения. Без шаблонов: следующий вопрос рождается из вашей ситуации.</p>
+  </div>
+  <div class="hwrap" id="hwrap">
+    <div class="htrack" id="htrack">
+      <article class="scard"><div class="num">01</div><div><h3>Услышать задачу</h3><p>Что происходит сейчас и какое изменение нужно именно вам, а не «как у всех».</p></div></article>
+      <article class="scard"><div class="num">02</div><div><h3>Собрать картину</h3><p>Продукт, клиенты, каналы, процессы, деньги и ваше время — на одной карте.</p></div></article>
+      <article class="scard"><div class="num">03</div><div><h3>Найти разрыв</h3><p>Где части мешают друг другу или держатся на непроверенной догадке.</p></div></article>
+      <article class="scard"><div class="num">04</div><div><h3>Выбрать действие</h3><p>Что проверяем первым и по каким признакам поймём, что сработало.</p></div></article>
+      <article class="scard dark"><div class="num">05</div><div><h3>Внедрить</h3><p>Кто делает, в какой срок, с каким ресурсом. Я рядом, пока это не заработает.</p></div></article>
+    </div>
+    <div class="hprogress" aria-hidden="true"><i id="hbar"></i></div>
+  </div>
+</section>
+
+
+<!-- TEAM -->
+<section class="team" id="team" aria-labelledby="h-team">
+  <div class="wrap">
+    <div>
+      <h2 id="h-team" class="reveal">Как будто в&nbsp;команде появились <span class="it">недостающие роли</span></h2>
+      <p class="lead reveal">В небольшом бизнесе нет денег и людей на финансового и операционного директора, HR и стратега. В наставничестве я закрываю эти роли сама — как команда на аутсорсе, которая видит дело целиком.</p>
+      <div class="why">
+        <div class="reveal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3"/></svg><p><b>Один человек видит всю систему</b><span>Не пять консультантов с разными советами, а один, кто видит, как деньги, продукт, время и команда влияют друг на друга.</span></p></div>
+        <div class="reveal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 20V9l8-5 8 5v11"/><path d="M9 20v-6h6v6"/></svg><p><b>Опыт собственника, а не теория</b><span>Я сама запускала колледж и кадровое агентство — знаю изнутри, где обычно болит.</span></p></div>
+        <div class="reveal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 18l5-6 4 3 7-9"/></svg><p><b>Без найма в штат</b><span>Не нужно искать и содержать несколько руководителей, пока бизнес небольшой: роли закрыты, а вы платите за работу, а не за ставки.</span></p></div>
+        <div class="reveal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M5 12l4 4 10-10"/></svg><p><b>Рядом, пока не заработает</b><span>Я не исчезаю после консультации: встречаемся каждую неделю и доводим решения до результата.</span></p></div>
+      </div>
+    </div>
+    <div class="org" id="org">
+      <svg class="links" id="orgLinks" aria-hidden="true"></svg>
+      <div class="core">Ваше дело<small>и вы как собственник</small></div>
+      <div class="seat" data-x="50" data-y="9"><div class="av"><img src="ava.webp" alt=""></div><div><b>Стратег</b><span>смыслы, цели, порядок шагов</span><span class="who">Наталья</span></div></div>
+      <div class="seat" data-x="82" data-y="32"><div class="av"><img src="ava.webp" alt=""></div><div><b>Финансовый директор</b><span>экономика, цена, план</span><span class="who">Наталья · к.э.н.</span></div></div>
+      <div class="seat" data-x="74" data-y="80"><div class="av"><img src="ava.webp" alt=""></div><div><b>Операционный директор</b><span>процессы, роли, ритм</span><span class="who">Наталья</span></div></div>
+      <div class="seat" data-x="26" data-y="80"><div class="av"><img src="ava.webp" alt=""></div><div><b>HR-директор</b><span>найм, задачи, обучение</span><span class="who">Наталья</span></div></div>
+      <div class="seat" data-x="18" data-y="32"><div class="av"><img src="ava.webp" alt=""></div><div><b>Продуктолог</b><span>линейка, упаковка, вход</span><span class="who">Наталья</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CINEMA -->
+<section class="cinema" id="stories" aria-labelledby="h-st">
+  <div class="wrap">
+    <div class="cinema-head">
+      <h2 id="h-st" class="reveal">Как я рассуждаю — <span class="it">своими словами</span></h2>
+      <p class="lead reveal">Короткие фрагменты из рабочих встреч: так звучит разговор со мной. Имена клиентов я не называю. Включайте звук: Наталья рассказывает сама. А если звук неудобен — в роликах есть субтитры.</p>
+    </div>
+    <div class="screen reveal" id="screen"><video id="vid" controls playsinline preload="metadata" poster="p01.jpg" src="v01.mp4" aria-label="Видео: Какая шестерёнка не сцепляется"></video>
+      <button class="play-ov" id="playOv" type="button"><span class="pl"><svg viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M7 4.5v15l13-7.5z"/></svg></span><span><b>Смотреть со звуком</b><small id="ovSub">Наталья рассказывает сама · 0:20</small></span><span class="eq" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span></button></div>
+    <div class="thumbs" id="thumbs"></div>
+  </div>
+</section>
+
+<!-- RESULTS -->
+<section class="results" aria-labelledby="h-res">
+  <div class="wrap">
+    <h2 id="h-res" class="reveal">Что менялось <span class="it">в&nbsp;проектах</span></h2>
+    <div class="rgrid">
+      <div class="r reveal"><div class="big"><span data-count="1.5" data-dec="1">0</span> <small>млн ₽</small></div><h3>Кадровое агентство</h3><p>Чек за подбор вырос с 60 тысяч до 1,5 млн ₽, рост ×4 за 4 месяца: пересобрали продукт и то, за какой результат агентство берёт деньги.</p></div>
+      <div class="r reveal"><div class="big">−<span data-count="90">0</span>%</div><h3>Производство</h3><p>Брака стало на 90% меньше после того, как ввели лист передачи операций между участками.</p></div>
+      <div class="r reveal"><div class="big"><span data-count="3" data-from="10">10</span> <small>дня вместо 10</small></div><h3>Парк-отель</h3><p>Зарплату стали считать за 3 дня вместо 10: перестроили процесс и порядок данных.</p></div>
+      <div class="r reveal"><div class="big"><span data-count="6">0</span> <small>месяцев</small></div><h3>Компания с 30-летней историей</h3><p>Собрали отдел продаж с нуля, и собственница вышла из операционной работы.</p></div>
+    </div>
+    <p class="fine reveal">Это результаты конкретных проектов, а не обещание. Что получится у вас, зависит от рынка, продукта, ресурсов и ваших действий — поэтому всё начинается с карты вашего дела.</p>
+  </div>
+</section>
+
+<!-- FORMATS -->
+<section class="ladder-sec" id="formats" aria-labelledby="h-f">
+  <div class="wrap">
+    <div class="cinema-head">
+      <h2 id="h-f" class="reveal">Три шага. <span class="it">Начинаем с&nbsp;карты</span></h2>
+      <p class="lead reveal">Первый созвон — бесплатный: вы получаете карту своего дела, а мы оба понимаем, нужна ли вам помощь. Захотите глубже — подробный разбор. После него решим, нужна ли долгая работа.</p>
+    </div>
+    <div class="ladder" id="ladder">
+      <svg class="stairs" id="stairs" aria-hidden="true"><path id="stairPath"/></svg>
+      <article class="rung tilt">
+        <span class="step">Шаг 1</span>
+        <div class="meta">Созвон · 30 минут · онлайн</div>
+        <h3>Карта вашего дела</h3>
+        <p>Проходим 8 частей вашего дела, находим главный разрыв и шаг на ближайшие 7 дней.</p>
+        <p>Карта остаётся у вас — даже если дальше мы не работаем.</p>
+        <div class="price">Бесплатно</div>
+      </article>
+      <article class="rung tilt">
+        <span class="step">Шаг 2</span>
+        <div class="meta">60–90 минут · онлайн</div>
+        <h3>Подробный разбор вашего дела</h3>
+        <p>Первая рабочая сессия: проходим продукт, клиентов, деньги, время и процессы. Так вы сразу видите, как это — работать со мной.</p>
+        <p>После: карта вашего дела, до трёх приоритетов и один проверяемый шаг — письменно.</p>
+        <div class="price">5&nbsp;000&nbsp;₽</div>
+      </article>
+      <article class="rung tilt">
+        <span class="step">Шаг 3</span>
+        <div class="meta">Встреча каждую неделю · внедряем вместе</div>
+        <h3>Наставничество на&nbsp;3&nbsp;или&nbsp;6&nbsp;месяцев</h3>
+        <p>Собираем и внедряем по шагам, с проверкой результата.</p>
+        <div class="months">
+          <div><b>Месяц 1</b><span>Смыслы, цели, продукты, модель и экономика</span></div>
+          <div><b>Месяц 2</b><span>Действия и процессы: кто что делает, внедрение</span></div>
+          <div><b>Месяц 3</b><span>Проявленность: кейсы, видео, контент, сайт, запуск</span></div>
+          <div><b>4–6</b><span>Закрепление: команда, делегирование, новые продукты</span></div>
+        </div>
+        <div class="price">По договорённости <small>формат и стоимость обсуждаем после разбора</small></div>
+      </article>
+    </div>
+    <div class="ladder-cta">
+      <a class="btn magnetic" href="https://t.me/expert_isakova" target="_blank" rel="noopener">Получить карту своего дела
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      <span class="note">Напишите в Telegram — подберём время</span>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about" id="about" aria-labelledby="h-about">
+  <div class="ghost" id="ghost" aria-hidden="true">Наталья Исакова · Наталья Исакова ·</div>
+  <div class="wrap">
+    <div class="about-vis"><div class="disc"></div><img src="cut_chin.webp" alt="Наталья Исакова, рука у подбородка, внимательный взгляд" width="633" height="1145" loading="lazy" id="aboutImg"></div>
+    <div class="about-copy">
+      <h2 id="h-about" class="reveal">Меня зовут <span class="it">Наталья Исакова</span></h2>
+      <p class="reveal" style="margin-top:28px">Я кандидат экономических наук, и финансовые модели — моя сильная сторона. Двадцать с лишним лет я навожу порядок в бизнесе. Работаю с услугами, помогающими практиками и предметным бизнесом — от студий и агентств до строительства и производства.</p>
+      <div class="facts">
+        <div class="fact reveal"><b>Частный колледж</b>запустила с нуля и вывела на безубыточность</div>
+        <div class="fact reveal"><b>Кадровое агентство</b>создала своё, выстраивала кадровые системы</div>
+        <div class="fact reveal"><b>«Эффективный рекрутинг»</b>вела тренинги, обучала сотрудников «Работы России»</div>
+        <div class="fact reveal"><b>Онлайн и очно</b>по всей России онлайн, очно — в Рыбинске</div>
+      </div>
+      <blockquote class="reveal">«Контент вырастает из смыслов и деятельности, а не сам по себе»<cite>— из рабочей встречи</cite></blockquote>
+    </div>
+  </div>
+</section>
+
+<!-- NOT DO -->
+<section class="nodo" aria-labelledby="h-nd">
+  <div class="wrap">
+    <h2 id="h-nd" class="reveal">Чего я <span class="it" style="color:var(--glow)">не&nbsp;делаю</span></h2>
+    <div class="nlist">
+      <div class="n"><span class="s">Обещать сумму дохода</span><p>Цена и доход идут от рынка, продукта и ваших ресурсов, а не от ощущений. Мы это проверяем, а не загадываем.</p></div>
+      <div class="n"><span class="s">Продавать мотивацию</span><p>Я работаю с продуктом, деньгами, временем, процессами и командой. Без «ресурса» и «сверхчеловека».</p></div>
+      <div class="n"><span class="s">Начинать с продвижения</span><p>Пока не ясно, что и кому вы продаёте, сайт и контент не помогут. Сначала смыслы и экономика.</p></div>
+      <div class="n"><span class="s">Делать вместо вас</span><p>Я вижу систему и задаю порядок шагов. Решения принимаете вы — я рядом, пока это не заработает.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq" aria-labelledby="h-faq">
+  <div class="wrap">
+    <h2 id="h-faq" class="reveal">Частые <span class="it">вопросы</span></h2>
+    <div id="faq">
+      <div class="qa"><button aria-expanded="false">Чем бесплатный созвон отличается от подробного разбора?<span class="pm" aria-hidden="true"></span></button><div class="ans"><div><p>Созвон «Карта вашего дела» — 30 минут: проходим 8 частей дела крупными мазками, называем главный разрыв и шаг на неделю. Подробный разбор — первая рабочая сессия по всем частям вашего дела с письменным результатом: картой, приоритетами и проверяемым шагом. По нему же видно, подходит ли вам работа со мной в наставничестве.</p></div></div></div>
+      <div class="qa"><button aria-expanded="false">Почему первый созвон бесплатный?<span class="pm" aria-hidden="true"></span></button><div class="ans"><div><p>За 30 минут я честно понимаю, могу ли помочь именно вам, а вы — подходит ли вам мой подход. Карта вашего дела и первый шаг остаются у вас в любом случае: это не «пробник», после которого вам будут дожимать продажу.</p></div></div></div>
+      <div class="qa"><button aria-expanded="false">Мне подойдёт, если я пока работаю один или одна?<span class="pm" aria-hidden="true"></span></button><div class="ans"><div><p>Да. Многие мои клиенты — специалисты и самозанятые. Как раз на этом этапе важно собрать продукт, цену и нагрузку так, чтобы рост не упёрся в ваше время.</p></div></div></div>
+      <div class="qa"><button aria-expanded="false">Вы работаете с психологами, коучами и другими помогающими специалистами?<span class="pm" aria-hidden="true"></span></button><div class="ans"><div><p>Да. У помогающих специалистов обычно сильная экспертиза, но продукт, цена и нагрузка собраны «как получилось». Мы собираем линейку из того, что вы уже умеете, считаем, сколько клиентов помещается в вашу неделю, и упаковываем так, чтобы клиенту было понятно, за что он платит.</p></div></div></div>
+      <div class="qa"><button aria-expanded="false">Вы работаете со строительным и производственным бизнесом?<span class="pm" aria-hidden="true"></span></button><div class="ans"><div><p>Да. У меня есть опыт с командами, которые строят модульные дома и работают с металлоконструкциями, с кадровым агентством и юридической практикой. Там мы смотрим процессы, роли и ритм работы.</p></div></div></div>
+      <div class="qa"><button aria-expanded="false">Чем наставничество на 3 месяца отличается от 6?<span class="pm" aria-hidden="true"></span></button><div class="ans"><div><p>За три месяца мы выстраиваем основу: смыслы, продукт, экономику, процессы и проявленность. Шесть месяцев — когда нужно ещё и закрепить: вырастить команду, передать задачи, запустить новые продукты. Что подходит вам, решаем после разбора.</p></div></div></div>
+      <div class="qa"><button aria-expanded="false">Вы гарантируете рост дохода?<span class="pm" aria-hidden="true"></span></button><div class="ans"><div><p>Нет, и честно скажу почему: доход зависит от рынка, спроса, бюджета и ваших действий. Я отвечаю за качество разбора, порядок шагов и сопровождение решений — и мы заранее договариваемся, по каким признакам поймём, что всё работает.</p></div></div></div>
+      <div class="qa"><button aria-expanded="false">Как подготовиться к созвону?<span class="pm" aria-hidden="true"></span></button><div class="ans"><div><p>Подумайте, какой один вопрос сейчас для вас главный. Цифры — клиенты, цены, часы в неделю — можно называть примерно или диапазонами.</p></div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL -->
+<section class="final" aria-labelledby="h-final">
+  <svg class="final-gear" id="finalGear" viewBox="0 0 1000 1000" aria-hidden="true"><path class="g" id="fgPath"/></svg>
+  <div class="wrap">
+    <div class="grid">
+      <div>
+        <h2 id="h-final"><span class="line-mask"><span>Начнём</span></span><span class="line-mask"><span><span class="it">с&nbsp;карты</span></span></span></h2>
+        <p class="lead">Расскажите, что сейчас происходит в вашем деле. За 30 минут мы соберём карту вашего дела, найдём главный разрыв и первый шаг — и карта останется у вас, даже если дальше мы работать не будем.</p>
+        <div class="cta-row" style="margin-top:34px">
+          <a class="btn light magnetic" href="https://t.me/expert_isakova" target="_blank" rel="noopener">Записаться на созвон в Telegram
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </div>
+      </div>
+      <div class="contacts">
+        <div><span class="k">Telegram</span><a href="https://t.me/expert_isakova" target="_blank" rel="noopener">@expert_isakova</a></div>
+        <div><span class="k">Телефон</span>+7 (980) 705-77-22</div>
+        <div><span class="k">Почта</span>isakova_na@bk.ru</div>
+        <div><span class="k">Отзывы клиентов</span><a href="https://vk.com/album-224421810_311863812" target="_blank" rel="noopener">альбом во ВКонтакте</a></div>
+      </div>
+    </div>
+    <footer>
+      <span>ИП Исакова Наталья Александровна · ОГРНИП 326760000050728 · ИНН 761001444350</span>
+      <span>Онлайн по России · очно в Рыбинске</span>
+    </footer>
+  </div>
+</section>
+</main>
+
+<script src="gsap.min.js"></script>
+<script src="ScrollTrigger.min.js"></script>
+<script src="lenis.min.js"></script>
+<script>
+(function(){
+const REDUCE=matchMedia('(prefers-reduced-motion: reduce)').matches;
+const FINE=matchMedia('(hover:hover) and (pointer:fine)').matches;
+const HAS_GSAP=!!window.gsap;
+const svgNS='http://www.w3.org/2000/svg';
+
+/* ---------- gear geometry ---------- */
+function gearPath(cx,cy,R,teeth,depth){
+  const pts=[],step=Math.PI*2/teeth;
+  for(let i=0;i<teeth;i++){
+    const a=i*step;
+    [[R-depth,a-step*.5],[R-depth,a-step*.3],[R,a-step*.17],[R,a+step*.17],[R-depth,a+step*.3]]
+      .forEach(([r,t])=>pts.push((cx+r*Math.cos(t)).toFixed(1)+' '+(cy+r*Math.sin(t)).toFixed(1)));
+  }
+  return 'M'+pts.join('L')+'Z';
+}
+document.getElementById('ldGear').setAttribute('d',gearPath(60,60,52,14,9));
+document.getElementById('brandGear').setAttribute('d',gearPath(15,15,13,10,3.2));
+document.getElementById('hgPath').setAttribute('d',gearPath(500,500,480,48,26));
+document.getElementById('fgPath').setAttribute('d',gearPath(500,500,480,40,30));
+
+/* ---------- marquee content ---------- */
+const words=['Смыслы','Продукт','Клиенты','Цена','Время','Процессы','Команда','Продвижение'];
+const mq=document.getElementById('mq');
+const gearIcon='<svg viewBox="0 0 44 44" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.6" d="'+gearPath(22,22,19,10,5)+'"/></svg>';
+let html='';for(let k=0;k<2;k++)words.forEach((w,i)=>{html+=`<span class="${i%2?'o':''}">${w}</span>${gearIcon}`});mq.innerHTML=html;
+
+/* ---------- split pains into words ---------- */
+document.querySelectorAll('[data-words]').forEach(p=>{
+  const walk=(node)=>{[...node.childNodes].forEach(n=>{
+    if(n.nodeType===3){const frag=document.createDocumentFragment();n.textContent.split(/(\s+)/).forEach(t=>{if(!t)return;if(/^\s+$/.test(t))frag.appendChild(document.createTextNode(t));else{const s=document.createElement('span');s.className='w';s.textContent=t;frag.appendChild(s)}});n.replaceWith(frag)}
+    else if(n.nodeType===1){walk(n)}})};
+  walk(p);
+});
+
+/* ---------- gear train ---------- */
+const train=document.getElementById('trainSvg');
+const MOB=matchMedia('(max-width:700px)').matches;
+const D=12;
+const G=[
+ {id:'sense',l:'Смысл и цель',T:26,q:'Зачем вам это дело — и каким оно должно быть, чтобы вам в нём было хорошо?',h:'Пока смыслы и цели не выстроены, непонятно, что продавать, — и сайт с контентом не помогут.'},
+ {id:'product',l:'Продукт',T:14,q:'Что именно вы продаёте и какие продукты за какими идут?',h:'Арт-студия продавала лепку, рисование и дни рождения. Пересобрали названия, структуру и сезонность — появились мастер-классы в торговых центрах.'},
+ {id:'price',l:'Цена и деньги',T:18,q:'Сколько это стоит на рынке — а не по нашим ощущениям?',h:'Ценообразование смотрим из рынка: сколько платят за такую работу и насколько вы интересны своей аудитории.'},
+ {id:'client',l:'Клиенты',T:13,q:'Кто покупает и сколько клиентов вам на самом деле нужно?',h:'Цифра «мне надо 10 клиентов» имеет смысл, только если они помещаются в ваше время и формат.'},
+ {id:'time',l:'Время',T:16,q:'Сколько клиентов на самом деле помещается в вашу неделю?',h:'Цель — 10 клиентов на групповых консультациях, а в 10 часов в неделю они не помещаются. Пока не пересоберёшь формат, план продаж не сработает.'},
+ {id:'process',l:'Процессы',T:12,q:'Где в работе лишнее движение — и что можно перестать делать?',h:'Команда, которая строит модульные дома, сняла сборку на видео и увидела, какой мастер что делает быстрее и где лишние движения.'},
+ {id:'team',l:'Команда',T:20,q:'Что значит «плохо работает» — и кто что делает утром, днём и вечером?',h:'Вместо оценки «рекрутер плохо работает» меняем ритм конкретных действий. Систему внутри команды строим до найма управляющего.'},
+ {id:'promo',l:'Продвижение',T:12,q:'Про что ваш сайт и контент — и из каких смыслов он вырастает?',h:'Сначала продукт и модель, потом проявленность: видео, кейсы, контент, сайт.'}
+];
+const MODULE=5;G.forEach(g=>g.R=g.T*MODULE);
+const ANG=MOB?[62,118,64,116,62,118,64]:[-28,34,-36,32,-34,30,-36];
+G[0].x=0;G[0].y=0;G[0].phase=0;G[0].dir=1;
+for(let i=1;i<G.length;i++){
+  const a=G[i-1],b=G[i],th=ANG[i-1],tr=th*Math.PI/180,dist=a.R+b.R-D;
+  b.x=a.x+dist*Math.cos(tr);b.y=a.y+dist*Math.sin(tr);b.dir=-a.dir;
+  const pa=360/a.T,pb=360/b.T;
+  let f=(((th-a.phase)%pa)+pa)%pa/pa;
+  b.phase=th+180-pb*(0.5-f);b.th=th;
+}
+let minX=Infinity,minY=Infinity,maxX=-Infinity,maxY=-Infinity;
+G.forEach(g=>{minX=Math.min(minX,g.x-g.R);maxX=Math.max(maxX,g.x+g.R);minY=Math.min(minY,g.y-g.R);maxY=Math.max(maxY,g.y+g.R+60)});
+const pad=40,padX=MOB?150:40;train.setAttribute('viewBox',`${minX-padX} ${minY-pad} ${maxX-minX+padX*2} ${maxY-minY+pad*2+20}`);
+const STUCK=4,SHIFT=46;
+const stuckVec=(()=>{const th=G[STUCK].th*Math.PI/180;return[Math.cos(th)*SHIFT,Math.sin(th)*SHIFT]})();
+G.forEach((g,i)=>{
+  const grp=document.createElementNS(svgNS,'g');grp.setAttribute('class','gear'+(i>=STUCK?' stopped':'')+(i===STUCK?' stuck':''));
+  grp.setAttribute('tabindex','0');grp.setAttribute('role','button');grp.setAttribute('aria-label',g.l);
+  const mover=document.createElementNS(svgNS,'g');
+  const rot=document.createElementNS(svgNS,'g');
+  const p=document.createElementNS(svgNS,'path');p.setAttribute('class','gear-shape');p.setAttribute('d',gearPath(g.x,g.y,g.R,g.T,D));
+  rot.appendChild(p);
+  for(let k=0;k<(g.T>15?6:4);k++){const a=k*Math.PI*2/(g.T>15?6:4);const ln=document.createElementNS(svgNS,'line');ln.setAttribute('class','gear-spoke');ln.setAttribute('x1',g.x+Math.cos(a)*g.R*.3);ln.setAttribute('y1',g.y+Math.sin(a)*g.R*.3);ln.setAttribute('x2',g.x+Math.cos(a)*(g.R-D-8));ln.setAttribute('y2',g.y+Math.sin(a)*(g.R-D-8));rot.appendChild(ln)}
+  const hub=document.createElementNS(svgNS,'circle');hub.setAttribute('class','gear-hub');hub.setAttribute('cx',g.x);hub.setAttribute('cy',g.y);hub.setAttribute('r',Math.max(14,g.R*.28));
+  rot.appendChild(hub);mover.appendChild(rot);
+  const dot=document.createElementNS(svgNS,'circle');dot.setAttribute('cx',g.x);dot.setAttribute('cy',g.y);dot.setAttribute('r',4);dot.setAttribute('fill',i===STUCK?'#C98A4B':'#7FB0EA');mover.appendChild(dot);
+  const lab=document.createElementNS(svgNS,'text');lab.setAttribute('class','glabel'+(i>STUCK?' dim':'')+(i===STUCK?' warm':''));
+  const below=MOB?(i%2===0):(g.y>=G[Math.max(0,i-1)].y||i===0);
+  lab.setAttribute('x',g.x);lab.setAttribute('y',below?g.y+g.R+34:g.y-g.R-16);lab.textContent=g.l;
+  if(MOB){lab.setAttribute('x',g.x+(i%2?-(g.R+12):(g.R+12)));lab.setAttribute('y',g.y+8);lab.style.textAnchor=i%2?'end':'start'}
+  mover.appendChild(lab);grp.appendChild(mover);train.appendChild(grp);
+  g.el=grp;g.rot=rot;g.mover=mover;g.lab=lab;
+  const act=()=>select(i);grp.addEventListener('click',act);if(FINE)grp.addEventListener('mouseenter',act);
+  grp.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();act()}});
+});
+// stuck gear offset: time gear and all downstream shift away
+let shiftK=1;
+function applyShift(){for(let i=STUCK;i<G.length;i++)G[i].mover.setAttribute('transform',`translate(${stuckVec[0]*shiftK} ${stuckVec[1]*shiftK})`)}
+applyShift();
+const mpLabel=document.getElementById('mpLabel'),mpQ=document.getElementById('mpQ'),mpHint=document.getElementById('mpHint');
+let fixed=false;
+function select(i){const g=G[i];mpLabel.textContent=g.l;mpQ.textContent=g.q;mpHint.textContent=(i===STUCK&&fixed)?'Пересобрали формат: вот такая группа, вот такая — и 10 часов в неделю. Клиенты и время сцеплены, механизм крутится.':g.h;G.forEach((x,k)=>x.el.classList.toggle('on',k===i))}
+select(STUCK);
+let A=0,A2=0,speed=0,inView=false,lastT=performance.now();
+const base=REDUCE?0:14; // deg/s for first gear
+function frame(t){
+  const dt=Math.min(.05,(t-lastT)/1000);lastT=t;
+  if(inView){A+=dt*(base+speed);if(fixed)A2+=(A-A2)*Math.min(1,dt*3.2);}
+  speed*=.92;
+  G.forEach((g,i)=>{const acc=(i>=STUCK)?A2:A;const ang=g.phase+g.dir*acc*(G[0].T/g.T);g.rot.setAttribute('transform',`rotate(${ang.toFixed(2)} ${g.x} ${g.y})`)});
+  requestAnimationFrame(frame);
+}
+requestAnimationFrame(frame);
+new IntersectionObserver(es=>es.forEach(e=>inView=e.isIntersecting),{threshold:.1}).observe(train);
+const fixBtn=document.getElementById('fixBtn');
+fixBtn.addEventListener('click',()=>{
+  if(fixed){ // break again
+    fixed=false;fixBtn.classList.remove('done');fixBtn.setAttribute('aria-pressed','false');fixBtn.querySelector('span').textContent='Сцепить «Время» с «Клиентами»';
+    const go=()=>{G.forEach((g,i)=>{if(i>=STUCK){g.el.classList.add('stopped');g.lab.classList.toggle('dim',i>STUCK)}});G[STUCK].el.classList.add('stuck');G[STUCK].lab.classList.add('warm')};
+    if(HAS_GSAP&&!REDUCE){const o={k:0};gsap.to(o,{k:1,duration:.7,ease:'power3.inOut',onUpdate:()=>{shiftK=o.k;applyShift()},onComplete:go})}else{shiftK=1;applyShift();go()}
+    select(STUCK);return;
+  }
+  fixed=true;fixBtn.classList.add('done');fixBtn.setAttribute('aria-pressed','true');fixBtn.querySelector('span').textContent='Снова разорвать';
+  // A2 must catch up to a value equivalent to A; snap to A when done
+  const done=()=>{G.forEach(g=>{g.el.classList.remove('stopped','stuck');g.lab.classList.remove('dim','warm')});A2=A;speed+=160;select(STUCK)};
+  if(HAS_GSAP&&!REDUCE){const o={k:1};gsap.to(o,{k:0,duration:1.1,ease:'expo.inOut',onUpdate:()=>{shiftK=o.k;applyShift()},onComplete:done})}else{shiftK=0;applyShift();done()}
+});
+
+
+/* panel gears */
+document.querySelectorAll('[data-gear]').forEach(p=>{const [cx,cy,R,T,D2]=p.dataset.gear.split(',').map(Number);p.setAttribute('d',gearPath(cx,cy,R,T,D2))});
+/* org seats */
+const org=document.getElementById('org'),seats=[...org.querySelectorAll('.seat')],links=document.getElementById('orgLinks');
+seats.forEach(st=>{st.style.left=st.dataset.x+'%';st.style.top=st.dataset.y+'%'});
+links.setAttribute('viewBox','0 0 100 100');links.setAttribute('preserveAspectRatio','none');
+const lnEls=seats.map(st=>{const l=document.createElementNS(svgNS,'line');l.setAttribute('x1',50);l.setAttribute('y1',50);l.setAttribute('x2',st.dataset.x);l.setAttribute('y2',st.dataset.y);l.setAttribute('vector-effect','non-scaling-stroke');links.appendChild(l);return l});
+function fillRows(){document.querySelectorAll('#rows li').forEach((li,i)=>setTimeout(()=>li.classList.add(li.dataset.s),REDUCE?0:300+i*260))}
+function fillSeats(){seats.forEach((st,i)=>setTimeout(()=>{st.classList.add('filled');lnEls[i].classList.add('on')},REDUCE?0:450+i*420))}
+
+/* ---------- thumbs ---------- */
+const V=[['01','Какая шестерёнка не сцепляется','0:20'],['02','Арт-студия: новое из того, что уже умеешь','0:33'],['03','Клиенты должны помещаться в жизнь','0:26'],['04','Контент вырастает из смыслов','0:21'],['05','Увидеть процесс, прежде чем его менять','0:32'],['06','Сначала система, потом управляющий','0:21'],['07','Что значит «плохо работает»?','0:22'],['08','Цена — от рынка, а не от ощущений','0:19']];
+const thumbs=document.getElementById('thumbs'),vid=document.getElementById('vid');
+V.forEach(([n,t,d],i)=>{const b=document.createElement('button');b.className='thumb reveal';b.type='button';if(!i)b.setAttribute('aria-current','true');
+  b.innerHTML=`<div class="tv"><img src="p${n}.jpg" alt="" loading="lazy"></div><div class="ti"><span>${n}</span>${t}<span class="eqmini" aria-hidden="true"><i></i><i></i><i></i></span><em>${d}</em></div>`;
+  if(FINE){let pv;b.addEventListener('mouseenter',()=>{if(!pv){pv=document.createElement('video');pv.muted=true;pv.loop=true;pv.playsInline=true;pv.preload='none';pv.src=`v${n}.mp4#t=3`;b.querySelector('.tv').appendChild(pv)}pv.play().catch(()=>{})});b.addEventListener('mouseleave',()=>{pv&&pv.pause()})}
+  b.addEventListener('click',()=>{thumbs.querySelectorAll('.thumb').forEach(x=>x.removeAttribute('aria-current'));b.setAttribute('aria-current','true');vid.poster=`p${n}.jpg`;vid.src=`v${n}.mp4`;vid.muted=false;document.getElementById('ovSub').textContent='Наталья рассказывает сама · '+d;vid.setAttribute('aria-label','Видео: '+t);vid.play().catch(()=>{});if(window.innerWidth<1020)vid.scrollIntoView({behavior:'smooth',block:'center'})});
+  thumbs.appendChild(b)});
+const scr=document.getElementById('screen'),ov=document.getElementById('playOv');
+ov.addEventListener('click',()=>{vid.muted=false;vid.volume=1;vid.play().catch(()=>{})});
+vid.addEventListener('play',()=>scr.classList.add('playing'));vid.addEventListener('pause',()=>scr.classList.remove('playing'));
+vid.addEventListener('ended',()=>{const all=[...thumbs.children];const cur=all.findIndex(b=>b.getAttribute('aria-current'));if(all[cur+1])all[cur+1].click()});
+
+/* ---------- FAQ ---------- */
+document.querySelectorAll('.qa button').forEach(b=>b.addEventListener('click',()=>{const qa=b.parentElement;const o=qa.classList.toggle('open');b.setAttribute('aria-expanded',o)}));
+
+/* ---------- header hide on scroll down ---------- */
+const hdr=document.getElementById('hdr');let lastY=0;
+function onScrollHdr(y){hdr.classList.toggle('solid',y>20);hdr.classList.toggle('hide',y>lastY&&y>400);lastY=y}
+addEventListener('scroll',()=>onScrollHdr(scrollY),{passive:true});
+
+/* ---------- magnetic buttons ---------- */
+if(FINE&&!REDUCE)document.querySelectorAll('.magnetic').forEach(el=>{
+  el.addEventListener('mousemove',e=>{const r=el.getBoundingClientRect();el.style.setProperty('--bx',((e.clientX-r.left-r.width/2)*.22)+'px');el.style.setProperty('--by',((e.clientY-r.top-r.height/2)*.3)+'px')});
+  el.addEventListener('mouseleave',()=>{el.style.setProperty('--bx','0px');el.style.setProperty('--by','0px')});
+});
+/* ---------- tilt cards ---------- */
+if(FINE&&!REDUCE)document.querySelectorAll('.tilt').forEach(el=>{
+  el.addEventListener('mousemove',e=>{const r=el.getBoundingClientRect();const x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;el.style.transform=`rotateY(${x*8}deg) rotateX(${-y*8}deg) translateZ(0)`;el.style.boxShadow=`${-x*30}px ${30-y*20}px 60px -30px rgba(14,30,52,.4)`});
+  el.addEventListener('mouseleave',()=>{el.style.transform='';el.style.boxShadow=''});
+});
+
+const loader=document.getElementById('loader');
+/* ---------- no motion / no gsap: show everything ---------- */
+if(REDUCE||!HAS_GSAP){loader.remove();fillSeats();fillRows();document.querySelectorAll('.pain .w').forEach(w=>w.style.opacity=1);document.querySelectorAll('[data-count]').forEach(s=>{s.textContent=s.dataset.dec?(+s.dataset.count).toFixed(1).replace('.',','):s.dataset.count});document.querySelectorAll('.n .s').forEach(s=>s.style.setProperty('--k',1));return}
+
+document.body.classList.add('anim');
+gsap.registerPlugin(ScrollTrigger);
+/* smooth scroll */
+const lenis=new Lenis({lerp:.1,smoothWheel:true});
+lenis.on('scroll',e=>{ScrollTrigger.update();speed+=Math.abs(e.velocity)*1.4;onScrollHdr(e.scroll)});
+gsap.ticker.add(t=>lenis.raf(t*1000));gsap.ticker.lagSmoothing(0);
+document.querySelectorAll('a[href^="#"]').forEach(a=>a.addEventListener('click',e=>{const id=a.getAttribute('href');if(id.length>1){const t=document.querySelector(id);if(t){e.preventDefault();lenis.scrollTo(t,{offset:-40})}}}));
+
+/* intro */
+gsap.set('.hero h1 .line-mask>span',{yPercent:110});
+gsap.set('.hero-fade',{opacity:0,y:24});
+gsap.set('#portrait',{clipPath:'inset(100% 0 0 0)'});
+gsap.set('#heroDisc',{scale:.6,opacity:0});
+gsap.set('#heroGear',{rotate:-40,opacity:0,scale:.9});
+gsap.set('.orbit',{opacity:0,scale:.8,y:20});
+const intro=gsap.timeline({delay:.15});
+intro.to('#ldGear',{rotate:240,transformOrigin:'50% 50%',duration:1.1,ease:'power2.inOut'})
+ .to(loader,{clipPath:'inset(0 0 100% 0)',duration:.9,ease:'expo.inOut'},'-=.25')
+ .add(()=>loader.remove())
+ .to('#heroDisc',{scale:1,opacity:1,duration:1.4,ease:'expo.out'},'-=.55')
+ .to('#heroGear',{rotate:0,opacity:.9,scale:1,duration:1.8,ease:'expo.out'},'<')
+ .to('.hero h1 .line-mask>span',{yPercent:0,duration:1.2,ease:'expo.out',stagger:.09},'<.05')
+ .to('#portrait',{clipPath:'inset(0% 0 0 0)',duration:1.4,ease:'expo.inOut'},'<.1')
+ .to('.hero-fade',{opacity:1,y:0,duration:1,ease:'expo.out',stagger:.08},'-=1')
+ .to('.orbit',{opacity:1,scale:1,y:0,duration:1,ease:'back.out(1.7)',stagger:.12},'-=.9');
+
+/* hero scroll parallax */
+gsap.to('#heroGear',{rotate:120,ease:'none',scrollTrigger:{trigger:'.hero',start:'top top',end:'bottom top',scrub:true}});
+gsap.to('#portrait',{yPercent:8,ease:'none',scrollTrigger:{trigger:'.hero',start:'top top',end:'bottom top',scrub:true}});
+gsap.to('.hero-copy',{yPercent:-12,opacity:.2,ease:'none',scrollTrigger:{trigger:'.hero',start:'top top',end:'bottom top',scrub:true}});
+/* idle orbit float + mouse parallax */
+document.querySelectorAll('.orbit').forEach((o,i)=>gsap.to(o,{y:'+=14',duration:2.6+i*.4,ease:'sine.inOut',yoyo:true,repeat:-1,delay:2.4+i*.2}));
+if(FINE){const vis=document.getElementById('visual');vis.addEventListener('mousemove',e=>{const r=vis.getBoundingClientRect();const x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;
+  document.querySelectorAll('.orbit').forEach(o=>{const d=+o.dataset.depth;gsap.to(o,{x:x*d*2,duration:.9,ease:'power3.out',overwrite:'auto'})});
+  gsap.to('#heroGear',{x:-x*30,y:-y*20,duration:1.2,ease:'power3.out',overwrite:'auto'})})}
+
+/* marquee: infinite, speeds with scroll velocity */
+const track=document.getElementById('mq');let mx=0,mv=0;
+gsap.ticker.add(()=>{const w=track.scrollWidth/2;mx-=1.1+mv;mv*=.9;if(mx<=-w)mx+=w;track.style.transform=`translate3d(${mx}px,0,0)`});
+lenis.on('scroll',e=>{mv+=Math.min(30,Math.abs(e.velocity)*.25)});
+
+/* generic reveals */
+gsap.utils.toArray('.reveal').forEach(el=>{gsap.to(el,{opacity:1,y:0,duration:1.1,ease:'expo.out',scrollTrigger:{trigger:el,start:'top 88%'}})});
+
+/* pains: words light up with scroll */
+gsap.utils.toArray('.pain').forEach(p=>{const ws=p.querySelectorAll('.w');gsap.to(ws,{opacity:1,stagger:.08,ease:'none',scrollTrigger:{trigger:p,start:'top 85%',end:'top 45%',scrub:true}})});
+
+/* mechanism entrance */
+gsap.from(G.map(g=>g.el),{opacity:0,scale:.6,transformOrigin:'50% 50%',duration:1.1,ease:'back.out(1.5)',stagger:.08,scrollTrigger:{trigger:'#train',start:'top 75%'}});
+
+/* horizontal steps (desktop) */
+const mmq=gsap.matchMedia();
+mmq.add('(min-width:1021px)',()=>{
+  const tr=document.getElementById('htrack');
+  const dist=()=>tr.scrollWidth-innerWidth+80;
+  gsap.to(tr,{x:()=>-dist(),ease:'none',scrollTrigger:{trigger:'#hwrap',start:'top 12%',end:()=>'+='+dist(),pin:true,scrub:1,invalidateOnRefresh:true,onUpdate:s=>gsap.set('#hbar',{scaleX:s.progress})}});
+  gsap.from('.scard',{y:80,rotate:3,opacity:0,stagger:.08,duration:1,ease:'expo.out',scrollTrigger:{trigger:'#hwrap',start:'top 80%'}});
+});
+mmq.add('(max-width:1020px)',()=>{gsap.utils.toArray('.scard').forEach(c=>gsap.from(c,{y:60,opacity:0,duration:1,ease:'expo.out',scrollTrigger:{trigger:c,start:'top 88%'}}))});
+
+/* screen zoom-in */
+gsap.fromTo('.screen',{scale:.88,borderRadius:'60px'},{scale:1,borderRadius:'28px',ease:'none',scrollTrigger:{trigger:'.screen',start:'top 95%',end:'top 35%',scrub:true}});
+
+/* org seats fill on enter */
+ScrollTrigger.create({trigger:'#org',start:'top 70%',once:true,onEnter:fillSeats});
+gsap.from('.core',{scale:.6,opacity:0,duration:1.2,ease:'back.out(1.6)',scrollTrigger:{trigger:'#org',start:'top 75%'}});
+
+/* map doc assembles */
+ScrollTrigger.create({trigger:'#mapdoc',start:'top 70%',once:true,onEnter:()=>{fillRows();
+  gsap.to('.gapbox',{opacity:1,y:0,duration:.9,ease:'expo.out',delay:2.6});
+  gsap.to('.stepbox',{opacity:1,y:0,duration:.9,ease:'expo.out',delay:3.0});
+  gsap.fromTo('#stamp',{scale:2.2,opacity:0,rotate:-20},{scale:1,opacity:1,rotate:12,duration:.6,ease:'back.out(2.4)',delay:3.5})}});
+gsap.from('#mapdoc',{y:80,rotate:4,opacity:0,duration:1.3,ease:'expo.out',scrollTrigger:{trigger:'#mapdoc',start:'top 85%'}});
+
+/* counters */
+document.querySelectorAll('[data-count]').forEach(s=>{const to=+s.dataset.count,from=+(s.dataset.from||0),dec=+(s.dataset.dec||0);const o={v:from};
+  gsap.to(o,{v:to,duration:2,ease:'expo.out',scrollTrigger:{trigger:s,start:'top 85%'},onUpdate:()=>{s.textContent=dec?o.v.toFixed(dec).replace('.',','):Math.round(o.v)}})});
+
+/* ladder: rungs rise + stair line draws */
+gsap.from('.rung',{y:120,opacity:0,duration:1.2,ease:'expo.out',stagger:.15,scrollTrigger:{trigger:'#ladder',start:'top 80%'}});
+function stairs(){const L=document.getElementById('ladder'),sv=document.getElementById('stairs'),r=L.getBoundingClientRect();const cs=[...L.querySelectorAll('.rung')].map(c=>c.getBoundingClientRect());
+  sv.setAttribute('viewBox',`0 0 ${r.width} ${r.height}`);sv.setAttribute('width',r.width);sv.setAttribute('height',r.height);
+  let d='';cs.forEach((c,i)=>{const x1=c.left-r.left+24,x2=c.right-r.left-24,y=c.top-r.top-30;
+    if(i===0)d+=`M${x1} ${y}`;else{const px=cs[i-1].right-r.left+(c.left-cs[i-1].right)/2;d+=`L${px} ${cs[i-1].top-r.top-30}L${px} ${y}L${x1} ${y}`}
+    d+=`L${x2} ${y}`});
+  const p=document.getElementById('stairPath');p.setAttribute('d',d);const len=p.getTotalLength();gsap.fromTo(p,{strokeDasharray:`${len}`,strokeDashoffset:len},{strokeDashoffset:0,ease:'none',scrollTrigger:{trigger:'#ladder',start:'top 70%',end:'bottom 70%',scrub:true}})}
+if(innerWidth>1020){addEventListener('load',stairs)}
+
+/* about: ghost text slide + portrait rise */
+gsap.fromTo('#ghost',{xPercent:5},{xPercent:-30,ease:'none',scrollTrigger:{trigger:'.about',start:'top bottom',end:'bottom top',scrub:true}});
+gsap.from('#aboutImg',{yPercent:12,opacity:0,duration:1.4,ease:'expo.out',scrollTrigger:{trigger:'.about-vis',start:'top 75%'}});
+
+/* not-do: strike-through draws */
+gsap.utils.toArray('.n .s').forEach(s=>{const o={k:0};gsap.to(o,{k:1,ease:'power2.inOut',scrollTrigger:{trigger:s,start:'top 80%',end:'top 45%',scrub:true},onUpdate:()=>s.style.setProperty('--k',o.k)})});
+
+/* final */
+gsap.set('.final h2 .line-mask>span',{yPercent:110});
+gsap.to('.final h2 .line-mask>span',{yPercent:0,duration:1.2,ease:'expo.out',stagger:.1,scrollTrigger:{trigger:'.final',start:'top 70%'}});
+gsap.to('#finalGear',{rotate:180,ease:'none',scrollTrigger:{trigger:'.final',start:'top bottom',end:'bottom top',scrub:true}});
+addEventListener('load',()=>ScrollTrigger.refresh());
+})();
+</script>
+</body>
+</html>
