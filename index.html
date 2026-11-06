@@ -85,7 +85,7 @@ section{position:relative}
 .final .btn.alt{color:#fff;box-shadow:inset 0 0 0 1.5px rgba(255,255,255,.55)}
 .final .btn.alt::before{background:#fff}
 .final .btn.alt:hover{color:var(--ink)}
-.note{font-size:16px;color:var(--ink-3)}
+.note{font-size:16px;color:var(--ink-2)}
 
 /* header */
 header.top{position:fixed;inset:0 0 auto 0;z-index:40;transition:transform .5s var(--ease),background .3s,box-shadow .3s}
@@ -210,10 +210,10 @@ nav.menu a.btn,nav.menu a.btn:hover{color:#fff}
 .hwrap{margin-top:70px;position:relative}
 .htrack{display:flex;gap:28px;padding:0 40px 140px max(40px,calc((100vw - var(--wrap))/2 + 40px));width:max-content}
 .scard{width:min(440px,78vw);min-height:440px;background:#fff;border-radius:28px;padding:40px;display:flex;flex-direction:column;justify-content:space-between;box-shadow:var(--shadow);position:relative;overflow:hidden}
-.scard .num{font-size:140px;font-weight:800;letter-spacing:-.06em;line-height:.8;color:var(--sky)}
+.scard .num{font-size:140px;font-weight:800;letter-spacing:-.06em;line-height:.8;color:#9A7CD5}
 .scard h3{font-size:36px;margin:22px 0 14px}
 .scard p{color:var(--ink-2);font-size:18px;margin:0}
-.scard.dark{background:var(--cobalt);color:#fff}.scard.dark .num{color:rgba(255,255,255,.22)}.scard.dark p{color:#E6DBF8}
+.scard.dark{background:var(--cobalt);color:#fff}.scard.dark .num{color:rgba(255,255,255,.55)}.scard.dark p{color:#E6DBF8}
 .hprogress{position:absolute;left:max(40px,calc((100vw - var(--wrap))/2 + 40px));right:40px;bottom:80px;height:2px;background:var(--line);border-radius:2px;overflow:hidden}
 .hprogress i{position:absolute;inset:0;background:var(--cobalt);transform-origin:left;transform:scaleX(0)}
 
@@ -319,7 +319,7 @@ blockquote cite{display:block;margin-top:10px;font:500 15px var(--sans);font-sty
 .final .lead{color:var(--on-night-2);margin-top:30px}
 .contacts{display:grid;gap:18px;font-size:18px}
 .contacts a{color:#fff;text-decoration-color:rgba(255,255,255,.35)}
-.contacts .k{display:block;font-size:13px;color:var(--on-night-2);margin-bottom:2px}
+.contacts .k{display:block;font-size:14px;color:var(--on-night-2);margin-bottom:2px}
 .final-gear{position:absolute;right:-180px;top:-140px;width:640px;opacity:.18;pointer-events:none}
 .final-gear .g{fill:none;stroke:var(--glow);stroke-width:1.4;vector-effect:non-scaling-stroke}
 footer{position:relative;z-index:2;margin-top:110px;padding-top:28px;border-top:1px solid var(--night-line);display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-size:13px;color:#A28CC3}
@@ -346,7 +346,7 @@ footer{position:relative;z-index:2;margin-top:110px;padding-top:28px;border-top:
 .seat .av{flex:none;width:46px;height:46px;border-radius:50%;background:var(--mist) center/cover;border:2px dashed var(--ice);transition:border-color .6s,transform .7s var(--ease)}
 .seat .av img{width:100%;height:100%;border-radius:50%;object-fit:cover;opacity:0;transform:scale(.6);transition:opacity .5s,transform .7s var(--ease)}
 .seat b{display:block;font-size:15px;letter-spacing:-.01em;line-height:1.2;color:var(--ink)}
-.seat span{display:block;font-size:13px;line-height:1.35;color:var(--ink-3);margin-top:2px}
+.seat span{display:block;font-size:14px;line-height:1.35;color:var(--ink-3);margin-top:2px}
 .seat .who{color:var(--cobalt);font-weight:600;opacity:0;transition:opacity .5s .2s}
 .seat.filled{background:#fff;border:1.5px solid transparent;box-shadow:0 20px 40px -24px rgba(29,13,53,.45)}
 .seat.filled .av{border:2px solid var(--cobalt)}
@@ -358,21 +358,26 @@ footer{position:relative;z-index:2;margin-top:110px;padding-top:28px;border-top:
 /* audience */
 .aud{padding:150px 0}
 .aud-head{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:end}
-.panels{margin-top:60px;display:flex;gap:18px;height:540px}
-.pan{position:relative;flex:1;min-width:0;border-radius:28px;overflow:hidden;padding:36px;display:flex;flex-direction:column;justify-content:flex-end;color:#fff;cursor:default;transition:flex-grow .8s var(--ease)}
+
+.panels{margin-top:60px;display:grid;grid-template-columns:repeat(3,1fr);gap:20px;align-items:stretch}
+.pan{position:relative;border-radius:28px;overflow:hidden;padding:34px 32px 32px;display:flex;flex-direction:column;gap:18px;color:#fff;cursor:default;transition:transform .5s var(--ease),box-shadow .5s var(--ease)}
+@media (hover:hover){.pan:hover{transform:translateY(-6px);box-shadow:0 40px 70px -40px rgba(36,22,63,.8)}}
 .pan:nth-child(1){background:linear-gradient(160deg,#7137C7,#3F157A)}
 .pan:nth-child(2){background:linear-gradient(160deg,#3F1F6D,#1A0B2F)}
 .pan:nth-child(3){background:linear-gradient(160deg,#8858D3,#5722A3)}
-@media (hover:hover){.panels:hover .pan{flex-grow:.8}.panels .pan:hover{flex-grow:1.9}}
+
 .pan .bg-gear{position:absolute;right:-90px;top:-90px;width:320px;opacity:.18;transition:transform 1.4s var(--ease)}
 .pan .bg-gear path{fill:none;stroke:#fff;stroke-width:2}
 @media (hover:hover){.pan:hover .bg-gear{transform:rotate(60deg)}}
-.pan .tag{position:relative;align-self:flex-start;margin-bottom:auto;font-size:14px;font-weight:600;padding:7px 12px;border-radius:999px;background:rgba(255,255,255,.16)}
-.pan h3{font-size:clamp(28px,2.6vw,38px);color:#fff;margin-bottom:12px}
-.pan .who{font-size:16px;color:#E6DBF8;margin-bottom:14px;font-weight:600}
-.pan h3{margin-top:28px}
-.pan p{font-size:16px;line-height:1.5;color:#E6DBF8;margin:0;max-width:46ch}
-.pan .ex{font-variant-numeric:lining-nums;margin-top:16px;font-family:var(--accent);font-style:italic;font-size:19px;color:#fff;opacity:.92}
+.pan .tag{position:relative;align-self:flex-start;font-size:14px;font-weight:700;padding:7px 13px;border-radius:999px;background:rgba(255,255,255,.18)}
+.pan h3{position:relative;font-size:clamp(28px,2.4vw,36px);line-height:1.05;color:#fff}
+.chips{position:relative;list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:8px}
+.chips li{font-size:14px;font-weight:600;line-height:1;padding:8px 11px;border-radius:10px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.18);color:#fff}
+.pan-row{position:relative;padding-top:14px;border-top:1px solid rgba(255,255,255,.16)}
+.pan .k{display:block;font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#D9C6F7;margin-bottom:6px}
+
+.pan p{font-size:17px;line-height:1.5;color:#fff;margin:0}
+.pan .ex{position:relative;margin-top:auto;padding:16px 18px;border-radius:16px;background:rgba(15,5,30,.28);font-size:16px;line-height:1.45;font-weight:600;color:#fff}
 @media (max-width:1240px){.team .wrap{grid-template-columns:1fr}.org{max-width:600px}}
 @media (max-width:1020px){
   .team .wrap,.aud-head{grid-template-columns:1fr}
@@ -552,16 +557,19 @@ footer{position:relative;z-index:2;margin-top:110px;padding-top:28px;border-top:
 /* reviews */
 .reviews{padding:40px 0 150px}
 .rev-head{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:end;border-top:1px solid var(--line);padding-top:110px}
-.rev-grid{margin-top:56px;display:grid;grid-template-columns:repeat(3,1fr);gap:28px;align-items:start}
+.rev-grid{margin-top:56px;display:grid;grid-template-columns:repeat(3,1fr);gap:40px 32px;align-items:start}
 .rev{margin:0;display:flex;flex-direction:column;gap:18px}
-.rev .reel-card{width:100%}
-.rev blockquote{margin:0;font-family:var(--accent);font-style:italic;font-size:21px;line-height:1.45;color:#fff}
-.rev figcaption{font-size:14px;color:var(--on-night-2)}
+.rev .reel-card{width:100%;max-width:300px}
+.rev-h{font-size:26px;line-height:1.12;letter-spacing:-.025em;color:#fff}
+.rev blockquote{margin:0;font-family:var(--sans);font-style:normal;font-weight:400;font-size:18px;line-height:1.6;letter-spacing:0;color:var(--on-night-2)}
+.rev blockquote strong{color:#fff;font-weight:600;background:linear-gradient(transparent 70%,rgba(196,171,240,.28) 0);padding:0 1px}
+.rev figcaption{font-size:14px;font-weight:600;color:var(--glow)}
 .rev-text{background:var(--night-2);border:1px solid var(--night-line);border-radius:24px;padding:40px 34px;align-self:stretch;justify-content:center}
 .rev-mark{font-family:var(--accent);font-size:120px;line-height:.6;color:var(--glow);height:48px}
-.rev-text blockquote{font-size:28px;line-height:1.35}
+.rev-text .rev-h{font-size:30px}
+.rev-text blockquote{font-size:20px}
 @media (max-width:1020px){.rev-head{grid-template-columns:1fr;gap:20px}.rev-grid{grid-template-columns:1fr 1fr}.rev-text{grid-column:1/-1}}
-@media (max-width:700px){.reviews{padding:20px 0 96px}.rev-head{padding-top:80px}.rev-grid{grid-template-columns:1fr;gap:44px}.rev .reel-card{max-width:340px}.rev blockquote{font-size:19px}.rev-text blockquote{font-size:23px}}
+@media (max-width:700px){.reviews{padding:20px 0 96px}.rev-head{padding-top:80px}.rev-grid{grid-template-columns:1fr;gap:48px}.rev .reel-card{max-width:300px}.rev-h{font-size:24px}.rev blockquote{font-size:17px}.rev-text .rev-h{font-size:26px}.rev-text blockquote{font-size:18px}}
 /* about watch */
 .about-watch{all:unset;box-sizing:border-box;cursor:pointer;margin-top:26px;display:flex;align-items:center;gap:18px;padding:10px 22px 10px 10px;border-radius:20px;background:#fff;box-shadow:var(--shadow);max-width:440px;transition:transform .4s var(--ease)}
 .aw-img{position:relative;flex:none;width:72px;aspect-ratio:9/16;border-radius:12px;overflow:hidden}
@@ -588,6 +596,18 @@ footer{position:relative;z-index:2;margin-top:110px;padding-top:28px;border-top:
 .reel-card.more{display:none}.reels.all .reel-card.more{display:flex}
 .reels-more{margin:40px auto 0;display:flex;width:max-content}
 @media (max-width:700px){.reels .reel-card.more{display:flex}.reels-more{display:none!important}}
+
+@media (max-width:1020px){.panels{grid-template-columns:1fr;max-width:640px}}
+@media (max-width:700px){
+  .mech{overflow:clip}
+  .mech-stage{position:relative}
+  .mech-panel{position:sticky;bottom:12px;z-index:5;margin-top:24px;padding:16px 18px 18px;gap:10px;border:1px solid var(--night-line);border-radius:22px;background:rgba(48,31,82,.94);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);box-shadow:0 -10px 40px -10px rgba(10,4,20,.7)}
+  .mp-label{font-size:14px;margin-bottom:4px}
+  .mp-q{font-size:20px;min-height:0;line-height:1.2}
+  .mp-hint{font-size:14px;line-height:1.45;margin-bottom:12px}
+  .fix{width:100%;justify-content:center;height:50px;font-size:15px}
+  .train{margin-top:32px}
+}
 </style>
 </head>
 <body class="no-js">
@@ -735,18 +755,27 @@ footer{position:relative;z-index:2;margin-top:110px;padding-top:28px;border-top:
       <p class="lead reveal">Три разных мира, один подход: сначала увидеть, как части дела связаны, потом выстроить порядок.</p>
     </div>
     <div class="panels">
-      <article class="pan reveal"><svg class="bg-gear" viewBox="0 0 320 320" aria-hidden="true"><path data-gear="160,160,150,16,18"/></svg><span class="tag">Помогающие профессии</span>
-        <h3>Вы умеете помогать людям</h3><div class="who">Психологи, коучи, нутрициологи, педагоги, специалисты по телу и здоровью</div>
-        <p>Но продукт, цена и нагрузка собраны «как получилось». Соберём линейку из того, что вы уже умеете, посчитаем, сколько клиентов помещается в вашу неделю, и упакуем так, чтобы было понятно, за что платить.</p>
-        <div class="ex">«10 клиентов в 10 часов не помещались — пересобрали формат групп»</div></article>
-      <article class="pan reveal"><svg class="bg-gear" viewBox="0 0 320 320" aria-hidden="true"><path data-gear="160,160,150,12,20"/></svg><span class="tag">Специалисты и самозанятые</span>
-        <h3>Дело держится на вас</h3><div class="who">Мастера, студии, эксперты, частные практики</div>
-        <p>Клиенты есть, но рост упирается в ваше время. Разбираем продукты, цены и точку входа, чтобы зарабатывать стабильнее в режиме, который вам подходит.</p>
-        <div class="ex">«Арт-студия переупаковала мастер-классы — и вышла в торговые центры»</div></article>
-      <article class="pan reveal"><svg class="bg-gear" viewBox="0 0 320 320" aria-hidden="true"><path data-gear="160,160,150,20,16"/></svg><span class="tag">Бизнес с командой</span>
-        <h3>Команда есть, системы нет</h3><div class="who">Строительство, производство, агентства, юридические практики</div>
-        <p>Процессы, роли и ритм работы: кто что делает, где лишнее движение и что передать, чтобы собственник вышел из операционки.</p>
-        <div class="ex">«Сборку модульных домов сняли на видео и увидели лишние движения»</div></article>
+      <article class="pan reveal"><svg class="bg-gear" viewBox="0 0 320 320" aria-hidden="true"><path data-gear="160,160,150,16,18"/></svg>
+        <span class="tag">Помогающие профессии</span>
+        <h3>Вы умеете помогать людям</h3>
+        <ul class="chips"><li>Психологи</li><li>Коучи</li><li>Нутрициологи</li><li>Педагоги</li><li>Специалисты по телу</li></ul>
+        <div class="pan-row"><span class="k">Что мешает</span><p>Продукт, цена и нагрузка собраны «как получилось».</p></div>
+        <div class="pan-row"><span class="k">Что делаем</span><p>Собираем линейку из того, что вы уже умеете, и считаем, сколько клиентов помещается в вашу неделю.</p></div>
+        <div class="ex"><span class="k">Из практики</span>10 клиентов в 10 часов не помещались — пересобрали формат групп.</div></article>
+      <article class="pan reveal"><svg class="bg-gear" viewBox="0 0 320 320" aria-hidden="true"><path data-gear="160,160,150,12,20"/></svg>
+        <span class="tag">Специалисты и самозанятые</span>
+        <h3>Дело держится на вас</h3>
+        <ul class="chips"><li>Мастера</li><li>Студии</li><li>Эксперты</li><li>Частные практики</li></ul>
+        <div class="pan-row"><span class="k">Что мешает</span><p>Клиенты есть, но рост упирается в ваше время.</p></div>
+        <div class="pan-row"><span class="k">Что делаем</span><p>Разбираем продукты, цены и точку входа, чтобы доход был стабильнее в удобном вам режиме.</p></div>
+        <div class="ex"><span class="k">Из практики</span>Арт-студия переупаковала мастер-классы — и вышла в торговые центры.</div></article>
+      <article class="pan reveal"><svg class="bg-gear" viewBox="0 0 320 320" aria-hidden="true"><path data-gear="160,160,150,20,16"/></svg>
+        <span class="tag">Бизнес с командой</span>
+        <h3>Команда есть, системы нет</h3>
+        <ul class="chips"><li>Строительство</li><li>Производство</li><li>Агентства</li><li>Юридические практики</li></ul>
+        <div class="pan-row"><span class="k">Что мешает</span><p>Всё держится на собственнике, роли и процессы не описаны.</p></div>
+        <div class="pan-row"><span class="k">Что делаем</span><p>Выстраиваем процессы, роли и ритм: кто что делает и что передать, чтобы вы вышли из операционки.</p></div>
+        <div class="ex"><span class="k">Из практики</span>Сборку модульных домов сняли на видео и увидели лишние движения.</div></article>
     </div>
   </div>
 </section>
@@ -758,6 +787,7 @@ footer{position:relative;z-index:2;margin-top:110px;padding-top:28px;border-top:
       <h2 id="h-mech" class="reveal">Бизнес — это механизм. <span class="it">Одна шестерёнка</span> — и&nbsp;всё стоит</h2>
       <p class="lead reveal">Нажмите на любую часть — это вопросы, с которых я начинаю. А теперь посмотрите на «Время»: оно не сцеплено с «Клиентами», и вся вторая половина механизма стоит.</p>
     </div>
+    <div class="mech-stage">
     <div class="train" id="train">
       <svg id="trainSvg" role="group" aria-label="Механизм из восьми шестерёнок: части бизнеса"></svg>
     </div>
@@ -770,6 +800,7 @@ footer{position:relative;z-index:2;margin-top:110px;padding-top:28px;border-top:
         <p class="mp-hint" id="mpHint">Цель — 10 клиентов на групповых консультациях, а в 10 часов в неделю они не помещаются. Пока не пересоберёшь формат, план продаж не сработает.</p>
         <button class="fix" id="fixBtn" type="button" aria-pressed="false"><i></i><span>Сцепить «Время» с «Клиентами»</span></button>
       </div>
+    </div>
     </div>
   </div>
 </section>
@@ -839,15 +870,18 @@ footer{position:relative;z-index:2;margin-top:110px;padding-top:28px;border-top:
     <div class="rev-grid">
       <figure class="rev reveal"><button class="reel-card" type="button" data-v="n01" aria-label="Видеоотзыв: увидеть ценность своего продукта, 0:28">
         <span class="rc-img"><img src="p_n01.jpg" alt="" loading="lazy"><span class="rc-play"><svg viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M7 4.5v15l13-7.5z"/></svg></span><em>0:28</em></span></button>
-        <blockquote>«Наталья подсветила очень классные штуки, которые мы даём в нашей театр-студии. Услышать обратную связь о ценности, которую мы несём, — это было самое главное.»</blockquote>
-        <figcaption>Театр-студия SOLAR · отзыв о консультации</figcaption></figure>
+        <h3 class="rev-h">Увидели ценность, которую несём людям</h3>
+        <blockquote>Наталья подсветила очень классные штуки, которые мы даём в нашей театр-студии. <strong>Услышать обратную связь о ценности, которую мы несём,</strong> — это было самое главное.</blockquote>
+        <figcaption>Театр-студия SOLAR · видеоотзыв</figcaption></figure>
       <figure class="rev reveal"><button class="reel-card" type="button" data-v="n02" aria-label="Видеоотзыв: кто ваш клиент, 0:32">
         <span class="rc-img"><img src="p_n02.jpg" alt="" loading="lazy"><span class="rc-play"><svg viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M7 4.5v15l13-7.5z"/></svg></span><em>0:32</em></span></button>
-        <blockquote>«Это был, наверное, самый подробный разбор целевой аудитории: кто она, где обитает, о чём думает. Два часа — разбор по косточкам. Такое было впервые.»</blockquote>
-        <figcaption>Театр-студия SOLAR · отзыв о консультации</figcaption></figure>
+        <h3 class="rev-h">Разобрали аудиторию по косточкам</h3>
+        <blockquote>Это был, наверное, <strong>самый подробный разбор целевой аудитории</strong>: кто она, где обитает, о чём думает. Два часа — разбор по косточкам. <strong>Такое было впервые.</strong></blockquote>
+        <figcaption>Театр-студия SOLAR · видеоотзыв</figcaption></figure>
       <figure class="rev rev-text reveal">
         <span class="rev-mark" aria-hidden="true">“</span>
-        <blockquote>«Мы тут исписали три листа с подсказками. Классно — развернули ценность! Теперь нужно будет это упаковать.»</blockquote>
+        <h3 class="rev-h">Три листа подсказок за одну встречу</h3>
+        <blockquote>Мы тут исписали <strong>три листа с подсказками.</strong> Классно — <strong>развернули ценность!</strong> Теперь нужно будет это упаковать.</blockquote>
         <figcaption>Команда театр-студии SOLAR · во время встречи</figcaption></figure>
     </div>
   </div>
