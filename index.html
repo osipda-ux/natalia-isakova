@@ -542,7 +542,7 @@ footer{position:relative;z-index:2;margin-top:110px;padding-top:28px;border-top:
 .rc-img video{z-index:1}
 .rc-play{position:absolute;z-index:2;left:50%;top:50%;width:58px;height:58px;margin:-29px 0 0 -29px;border-radius:50%;background:var(--cobalt);display:grid;place-items:center;box-shadow:0 14px 30px -10px rgba(36,22,63,.7);transition:transform .4s var(--ease),opacity .3s}
 .rc-play svg{width:22px;height:22px;margin-left:3px}
-.rc-img em{position:absolute;z-index:2;right:10px;bottom:10px;font-style:normal;font-size:13px;font-weight:700;color:#fff;background:rgba(36,22,63,.72);padding:4px 9px;border-radius:999px;font-variant-numeric:tabular-nums}
+.rc-img em{position:absolute;z-index:2;right:10px;top:10px;font-style:normal;font-size:13px;font-weight:700;color:#fff;background:rgba(36,22,63,.72);padding:4px 9px;border-radius:999px;font-variant-numeric:tabular-nums}
 .rc-t{display:block;font-size:17px;line-height:1.3;font-weight:700;letter-spacing:-.01em;color:var(--ink);padding:0 4px}
 .rc-t small{display:block;font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--cobalt);margin-bottom:4px}
 .reel-card:focus-visible .rc-img{outline:3px solid var(--cobalt-2);outline-offset:3px}
@@ -585,6 +585,9 @@ footer{position:relative;z-index:2;margin-top:110px;padding-top:28px;border-top:
 .lb-x{top:20px;right:20px}.lb-prev{left:24px;top:50%;margin-top:-26px}.lb-next{right:24px;top:50%;margin-top:-26px}
 .lb.single .lb-prev,.lb.single .lb-next{display:none}
 @media (max-width:700px){.lb-prev,.lb-next{top:auto;bottom:18px;margin:0}.lb-prev{left:calc(50% - 64px)}.lb-next{right:calc(50% - 64px)}.lb video{height:min(76svh,calc(92vw*16/9))}.lb-x{top:12px;right:12px}}
+.reel-card.more{display:none}.reels.all .reel-card.more{display:flex}
+.reels-more{margin:40px auto 0;display:flex;width:max-content}
+@media (max-width:700px){.reels .reel-card.more{display:flex}.reels-more{display:none!important}}
 </style>
 </head>
 <body class="no-js">
@@ -1159,14 +1162,17 @@ function fillSeats(){seats.forEach((st,i)=>setTimeout(()=>{st.classList.add('fil
 
 /* ---------- reels + lightbox ---------- */
 const VDIR='';
-const R=[['n20','Когда страшно считать деньги','Разбор вживую','0:32'],['n18','Как освободить время собственника','Разбор вживую','0:44'],['n16','Сколько стоит один клиент','Пример расчёта','0:24'],['n10','Выручка и прибыль','Пример расчёта','0:15'],
- ['n06','Куда именно вы хотите прийти','Разбор вживую','0:22'],['n03','От совета — к внедрению','Как я работаю','0:24'],['o02','Новое — из того, что уже умеешь','История из практики','0:33'],['o07','Что значит «плохо работает»','Разбор вживую','0:22']];
+const R=[['n20','Когда страшно считать деньги','Разбор вживую','0:32'],['n18','Как освободить время собственника','Разбор вживую','0:44'],['n07','В 74 — планы на масштаб','История из практики','0:19'],['n16','Сколько стоит один клиент','Пример расчёта','0:24'],
+ ['n10','Выручка и прибыль','Пример расчёта','0:15'],['n06','Куда именно вы хотите прийти','Разбор вживую','0:22'],['n03','От совета — к внедрению','Как я работаю','0:24'],['o02','Новое — из того, что уже умеешь','История из практики','0:33'],
+ ['n08','Как показать результат работы','Разбор вживую','0:30'],['n11','Один проект — один ответственный','Разбор вживую','0:26'],['n05','Один продукт. Две задачи клиента','Разбор вживую','0:36'],['o07','Что значит «плохо работает»','Разбор вживую','0:22']];
 const EXTRA={n01:'Отзыв · Театр-студия SOLAR',n02:'Отзыв · Театр-студия SOLAR',n04:'Наталья о себе'};
 const reelsEl=document.getElementById('reels');
-R.forEach(([n,t,k,d])=>{const b=document.createElement('button');b.className='reel-card reveal';b.type='button';b.dataset.v=n;
+const SHOW=8;R.forEach(([n,t,k,d],ri)=>{const b=document.createElement('button');b.className='reel-card'+(ri<SHOW?' reveal':' more');b.type='button';b.dataset.v=n;
   b.innerHTML=`<span class="rc-img"><img src="${VDIR}p_${n}.jpg" alt="" loading="lazy"><span class="rc-play"><svg viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M7 4.5v15l13-7.5z"/></svg></span><em>${d}</em></span>`;b.setAttribute('aria-label',`${k}: ${t}, ${d}`);
   if(FINE){let pv;b.addEventListener('mouseenter',()=>{if(!pv){pv=document.createElement('video');pv.muted=true;pv.loop=true;pv.playsInline=true;pv.src=`${VDIR}${n}.mp4#t=1`;b.querySelector('.rc-img').appendChild(pv)}pv.play().catch(()=>{})});b.addEventListener('mouseleave',()=>{pv&&pv.pause()})}
   reelsEl.appendChild(b)});
+if(R.length>SHOW){const mb=document.createElement('button');mb.type='button';mb.className='btn alt reels-more';mb.innerHTML=`Показать ещё ${R.length-SHOW}`;reelsEl.after(mb);
+  mb.addEventListener('click',()=>{reelsEl.classList.add('all');mb.remove();gsap.from('.reel-card.more',{y:40,opacity:0,duration:.8,ease:'expo.out',stagger:.08});ScrollTrigger.refresh()})}
 const lb=document.getElementById('lb'),lbv=document.getElementById('lbv'),lbcap=document.getElementById('lbcap');
 let lbList=[],lbI=0,lbLast=null;
 function lbShow(i){lbI=(i+lbList.length)%lbList.length;const n=lbList[lbI];const r=R.find(x=>x[0]===n);
