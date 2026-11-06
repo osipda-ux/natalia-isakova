@@ -78,6 +78,13 @@ section{position:relative}
 .btn.light{background:#fff;color:var(--ink);box-shadow:none}
 .btn.light::before{background:var(--sky)}
 .btn.light:hover{color:var(--ink)}
+.btn.alt{background:transparent;color:var(--cobalt);box-shadow:inset 0 0 0 1.5px var(--cobalt)}
+.btn.alt::before{background:var(--cobalt)}
+.btn.alt:hover{color:#fff}
+@media (hover:hover){.btn.alt:hover svg{transform:none}}
+.final .btn.alt{color:#fff;box-shadow:inset 0 0 0 1.5px rgba(255,255,255,.55)}
+.final .btn.alt::before{background:#fff}
+.final .btn.alt:hover{color:var(--ink)}
 .note{font-size:16px;color:var(--ink-3)}
 
 /* header */
@@ -554,6 +561,7 @@ footer{position:relative;z-index:2;margin-top:110px;padding-top:28px;border-top:
       <div class="cta-row hero-fade">
         <a class="btn magnetic" href="https://t.me/expert_isakova" target="_blank" rel="noopener">Получить карту своего дела
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <a class="btn alt magnetic" href="https://max.ru/u/f9LHodD0cOIM5Uo9FeI8vxKBrWXJ91ruAfPB7_84nG7xPhtTnrnUVDFHum4" target="_blank" rel="noopener">Записаться в MAX <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 12a8 8 0 0 1-11.6 7.1L4 20l1-4.1A8 8 0 1 1 20 12z"/></svg></a>
         <span class="note">Бесплатный созвон · 30 минут · онлайн</span>
       </div>
       <div class="creds hero-fade">
@@ -613,6 +621,7 @@ footer{position:relative;z-index:2;margin-top:110px;padding-top:28px;border-top:
       <div class="cta-row reveal" style="margin-top:30px">
         <a class="btn magnetic" href="https://t.me/expert_isakova" target="_blank" rel="noopener">Получить карту своего дела
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <a class="btn alt magnetic" href="https://max.ru/u/f9LHodD0cOIM5Uo9FeI8vxKBrWXJ91ruAfPB7_84nG7xPhtTnrnUVDFHum4" target="_blank" rel="noopener">Записаться в MAX <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 12a8 8 0 0 1-11.6 7.1L4 20l1-4.1A8 8 0 1 1 20 12z"/></svg></a>
         <span class="note">Бесплатно · 30 минут · онлайн</span>
       </div>
     </div>
@@ -809,7 +818,8 @@ footer{position:relative;z-index:2;margin-top:110px;padding-top:28px;border-top:
     <div class="ladder-cta">
       <a class="btn magnetic" href="https://t.me/expert_isakova" target="_blank" rel="noopener">Получить карту своего дела
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-      <span class="note">Напишите в Telegram — подберём время</span>
+        <a class="btn alt magnetic" href="https://max.ru/u/f9LHodD0cOIM5Uo9FeI8vxKBrWXJ91ruAfPB7_84nG7xPhtTnrnUVDFHum4" target="_blank" rel="noopener">Записаться в MAX <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 12a8 8 0 0 1-11.6 7.1L4 20l1-4.1A8 8 0 1 1 20 12z"/></svg></a>
+      <span class="note">Напишите в Telegram или MAX — подберём время</span>
     </div>
   </div>
 </section>
@@ -872,12 +882,14 @@ footer{position:relative;z-index:2;margin-top:110px;padding-top:28px;border-top:
         <h2 id="h-final"><span class="line-mask"><span>Начнём</span></span><span class="line-mask"><span><span class="it">с&nbsp;карты</span></span></span></h2>
         <p class="lead">Расскажите, что сейчас происходит в вашем деле. За 30 минут мы соберём карту вашего дела, найдём главный разрыв и первый шаг — и карта останется у вас, даже если дальше мы работать не будем.</p>
         <div class="cta-row" style="margin-top:34px">
-          <a class="btn light magnetic" href="https://t.me/expert_isakova" target="_blank" rel="noopener">Записаться на созвон в Telegram
+          <a class="btn light magnetic" href="https://t.me/expert_isakova" target="_blank" rel="noopener">Записаться в Telegram
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          <a class="btn alt magnetic" href="https://max.ru/u/f9LHodD0cOIM5Uo9FeI8vxKBrWXJ91ruAfPB7_84nG7xPhtTnrnUVDFHum4" target="_blank" rel="noopener">Записаться в MAX <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 12a8 8 0 0 1-11.6 7.1L4 20l1-4.1A8 8 0 1 1 20 12z"/></svg></a>
         </div>
       </div>
       <div class="contacts">
         <div><span class="k">Telegram</span><a href="https://t.me/expert_isakova" target="_blank" rel="noopener">@expert_isakova</a></div>
+        <div><span class="k">MAX</span><a href="https://max.ru/u/f9LHodD0cOIM5Uo9FeI8vxKBrWXJ91ruAfPB7_84nG7xPhtTnrnUVDFHum4" target="_blank" rel="noopener">написать в MAX</a></div>
         <div><span class="k">Телефон</span>+7 (980) 705-77-22</div>
         <div><span class="k">Почта</span>isakova_na@bk.ru</div>
         <div><span class="k">Отзывы клиентов</span><a href="https://vk.com/album-224421810_311863812" target="_blank" rel="noopener">альбом во ВКонтакте</a></div>
@@ -1182,7 +1194,7 @@ document.querySelectorAll('[data-count]').forEach(s=>{const to=+s.dataset.count,
   gsap.to(o,{v:to,duration:2,ease:'expo.out',scrollTrigger:{trigger:s,start:'top 85%'},onUpdate:()=>{s.textContent=dec?o.v.toFixed(dec).replace('.',','):Math.round(o.v)}})});
 
 /* ladder: rungs rise + stair line draws */
-gsap.from('.rung',{y:120,opacity:0,duration:1.2,ease:'expo.out',stagger:.15,scrollTrigger:{trigger:'#ladder',start:'top 80%'}});
+gsap.fromTo('.rung',{y:70,opacity:0},{y:0,opacity:1,duration:1.1,ease:'expo.out',stagger:.12,clearProps:'transform',scrollTrigger:{trigger:'#ladder',start:'top 88%',once:true}});
 function stairs(){const L=document.getElementById('ladder'),sv=document.getElementById('stairs'),r=L.getBoundingClientRect();const cs=[...L.querySelectorAll('.rung')].map(c=>c.getBoundingClientRect());
   sv.setAttribute('viewBox',`0 0 ${r.width} ${r.height}`);sv.setAttribute('width',r.width);sv.setAttribute('height',r.height);
   let d='';cs.forEach((c,i)=>{const x1=c.left-r.left+24,x2=c.right-r.left-24,y=c.top-r.top-30;
