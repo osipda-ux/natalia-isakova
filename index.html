@@ -533,6 +533,58 @@ footer{position:relative;z-index:2;margin-top:110px;padding-top:28px;border-top:
 .dk .seat .who{color:var(--glow)}.dk .seat.on .who,.dk .seat.filled .who{color:var(--cobalt)}
 .dk .core{background:radial-gradient(circle at 35% 30%,#8E6FD6,#5E3EA3 72%);box-shadow:0 30px 60px -24px rgba(0,0,0,.55)}
 .dk .org svg.links line.on{stroke:var(--glow)}
+
+/* reels gallery */
+.reels{margin-top:56px;display:grid;grid-template-columns:repeat(4,1fr);gap:28px 22px}
+.reel-card{all:unset;box-sizing:border-box;cursor:pointer;display:flex;flex-direction:column;gap:14px}
+.rc-img{position:relative;display:block;aspect-ratio:9/16;border-radius:20px;overflow:hidden;background:var(--sky);box-shadow:0 30px 50px -30px rgba(36,22,63,.55);transition:transform .5s var(--ease),box-shadow .5s var(--ease)}
+.rc-img img,.rc-img video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.rc-img video{z-index:1}
+.rc-play{position:absolute;z-index:2;left:50%;top:50%;width:58px;height:58px;margin:-29px 0 0 -29px;border-radius:50%;background:var(--cobalt);display:grid;place-items:center;box-shadow:0 14px 30px -10px rgba(36,22,63,.7);transition:transform .4s var(--ease),opacity .3s}
+.rc-play svg{width:22px;height:22px;margin-left:3px}
+.rc-img em{position:absolute;z-index:2;right:10px;bottom:10px;font-style:normal;font-size:13px;font-weight:700;color:#fff;background:rgba(36,22,63,.72);padding:4px 9px;border-radius:999px;font-variant-numeric:tabular-nums}
+.rc-t{display:block;font-size:17px;line-height:1.3;font-weight:700;letter-spacing:-.01em;color:var(--ink);padding:0 4px}
+.rc-t small{display:block;font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--cobalt);margin-bottom:4px}
+.reel-card:focus-visible .rc-img{outline:3px solid var(--cobalt-2);outline-offset:3px}
+@media (hover:hover){.reel-card:hover .rc-img{transform:translateY(-6px);box-shadow:0 40px 60px -30px rgba(36,22,63,.7)}.reel-card:hover .rc-play{transform:scale(1.1);opacity:.0}}
+@media (max-width:1020px){.reels{grid-template-columns:repeat(3,1fr)}}
+@media (max-width:700px){.reels{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:14px;margin:36px -24px 0;padding:6px 24px 14px;scroll-padding-left:24px;scrollbar-width:none}.reels::-webkit-scrollbar{display:none}.reels .reel-card{flex:0 0 62%;scroll-snap-align:start}.rc-t{font-size:16px}}
+/* reviews */
+.reviews{padding:40px 0 150px}
+.rev-head{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:end;border-top:1px solid var(--line);padding-top:110px}
+.rev-grid{margin-top:56px;display:grid;grid-template-columns:repeat(3,1fr);gap:28px;align-items:start}
+.rev{margin:0;display:flex;flex-direction:column;gap:18px}
+.rev .reel-card{width:100%}
+.rev blockquote{margin:0;font-family:var(--accent);font-style:italic;font-size:21px;line-height:1.45;color:#fff}
+.rev figcaption{font-size:14px;color:var(--on-night-2)}
+.rev-text{background:var(--night-2);border:1px solid var(--night-line);border-radius:24px;padding:40px 34px;align-self:stretch;justify-content:center}
+.rev-mark{font-family:var(--accent);font-size:120px;line-height:.6;color:var(--glow);height:48px}
+.rev-text blockquote{font-size:28px;line-height:1.35}
+@media (max-width:1020px){.rev-head{grid-template-columns:1fr;gap:20px}.rev-grid{grid-template-columns:1fr 1fr}.rev-text{grid-column:1/-1}}
+@media (max-width:700px){.reviews{padding:20px 0 96px}.rev-head{padding-top:80px}.rev-grid{grid-template-columns:1fr;gap:44px}.rev .reel-card{max-width:340px}.rev blockquote{font-size:19px}.rev-text blockquote{font-size:23px}}
+/* about watch */
+.about-watch{all:unset;box-sizing:border-box;cursor:pointer;margin-top:26px;display:flex;align-items:center;gap:18px;padding:10px 22px 10px 10px;border-radius:20px;background:#fff;box-shadow:var(--shadow);max-width:440px;transition:transform .4s var(--ease)}
+.aw-img{position:relative;flex:none;width:72px;aspect-ratio:9/16;border-radius:12px;overflow:hidden}
+.aw-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.aw-img .rc-play{width:34px;height:34px;margin:-17px 0 0 -17px}.aw-img .rc-play svg{width:14px;height:14px;margin-left:2px}
+.aw-t{font-size:15px;line-height:1.4;color:var(--ink-3)}.aw-t b{display:block;font-size:19px;color:var(--ink);letter-spacing:-.01em;margin-bottom:2px}
+.about-watch:focus-visible{outline:3px solid var(--cobalt-2);outline-offset:3px}
+@media (hover:hover){.about-watch:hover{transform:translateY(-4px)}}
+/* lightbox */
+.lb{position:fixed;inset:0;z-index:200;display:grid;place-items:center;background:rgba(22,12,38,.88);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);opacity:0;transition:opacity .3s var(--ease)}
+.lb.on{opacity:1}
+.lb[hidden]{display:none}
+.lb-in{display:flex;flex-direction:column;align-items:center;gap:14px;transform:scale(.96);transition:transform .45s var(--ease)}
+.lb.on .lb-in{transform:none}
+.lb video{height:min(84svh,calc(92vw*16/9));aspect-ratio:9/16;max-width:92vw;border-radius:18px;background:#000;box-shadow:0 40px 90px -30px rgba(0,0,0,.8)}
+.lb-cap{color:var(--on-night);font-size:15px;font-weight:600;text-align:center;padding:0 20px}
+.lb-btn{all:unset;cursor:pointer;position:fixed;width:52px;height:52px;border-radius:50%;display:grid;place-items:center;background:rgba(255,255,255,.12);color:#fff;transition:background .25s}
+.lb-btn svg{width:24px;height:24px}
+.lb-btn:focus-visible{outline:2px solid var(--glow);outline-offset:3px}
+@media (hover:hover){.lb-btn:hover{background:rgba(255,255,255,.24)}}
+.lb-x{top:20px;right:20px}.lb-prev{left:24px;top:50%;margin-top:-26px}.lb-next{right:24px;top:50%;margin-top:-26px}
+.lb.single .lb-prev,.lb.single .lb-next{display:none}
+@media (max-width:700px){.lb-prev,.lb-next{top:auto;bottom:18px;margin:0}.lb-prev{left:calc(50% - 64px)}.lb-next{right:calc(50% - 64px)}.lb video{height:min(76svh,calc(92vw*16/9))}.lb-x{top:12px;right:12px}}
 </style>
 </head>
 <body class="no-js">
@@ -767,12 +819,34 @@ footer{position:relative;z-index:2;margin-top:110px;padding-top:28px;border-top:
 <section class="cinema" id="stories" aria-labelledby="h-st">
   <div class="wrap">
     <div class="cinema-head">
-      <h2 id="h-st" class="reveal">Как я рассуждаю — <span class="it">своими словами</span></h2>
-      <p class="lead reveal">Короткие фрагменты из рабочих встреч: так звучит разговор со мной. Имена клиентов я не называю. Включайте звук: Наталья рассказывает сама. А если звук неудобен — в роликах есть субтитры.</p>
+      <h2 id="h-st" class="reveal">Разбор вживую — <span class="it">как это звучит</span></h2>
+      <p class="lead reveal">Короткие фрагменты рабочих встреч и истории из практики. Так проходит разговор со мной: с цифрами, вопросами и решениями. Включайте звук.</p>
     </div>
-    <div class="screen reveal" id="screen"><video id="vid" controls playsinline preload="metadata" poster="p01.jpg" src="v01.mp4" aria-label="Видео: Какая шестерёнка не сцепляется"></video>
-      <button class="play-ov" id="playOv" type="button"><span class="pl"><svg viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M7 4.5v15l13-7.5z"/></svg></span><span><b>Смотреть со звуком</b><small id="ovSub">Наталья рассказывает сама · 0:20</small></span><span class="eq" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span></button></div>
-    <div class="thumbs" id="thumbs"></div>
+    <div class="reels" id="reels"></div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="reviews dk" id="reviews" aria-labelledby="h-rev">
+  <div class="wrap">
+    <div class="rev-head">
+      <h2 id="h-rev" class="reveal">Что говорят <span class="it">клиенты</span></h2>
+      <p class="lead reveal">Театр-студия SOLAR: консультация по продукту и целевой аудитории.</p>
+    </div>
+    <div class="rev-grid">
+      <figure class="rev reveal"><button class="reel-card" type="button" data-v="n01" aria-label="Видеоотзыв: увидеть ценность своего продукта, 0:28">
+        <span class="rc-img"><img src="p_n01.jpg" alt="" loading="lazy"><span class="rc-play"><svg viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M7 4.5v15l13-7.5z"/></svg></span><em>0:28</em></span></button>
+        <blockquote>«Наталья подсветила очень классные штуки, которые мы даём в нашей театр-студии. Услышать обратную связь о ценности, которую мы несём, — это было самое главное.»</blockquote>
+        <figcaption>Театр-студия SOLAR · отзыв о консультации</figcaption></figure>
+      <figure class="rev reveal"><button class="reel-card" type="button" data-v="n02" aria-label="Видеоотзыв: кто ваш клиент, 0:32">
+        <span class="rc-img"><img src="p_n02.jpg" alt="" loading="lazy"><span class="rc-play"><svg viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M7 4.5v15l13-7.5z"/></svg></span><em>0:32</em></span></button>
+        <blockquote>«Это был, наверное, самый подробный разбор целевой аудитории: кто она, где обитает, о чём думает. Два часа — разбор по косточкам. Такое было впервые.»</blockquote>
+        <figcaption>Театр-студия SOLAR · отзыв о консультации</figcaption></figure>
+      <figure class="rev rev-text reveal">
+        <span class="rev-mark" aria-hidden="true">“</span>
+        <blockquote>«Мы тут исписали три листа с подсказками. Классно — развернули ценность! Теперь нужно будет это упаковать.»</blockquote>
+        <figcaption>Команда театр-студии SOLAR · во время встречи</figcaption></figure>
+    </div>
   </div>
 </section>
 
@@ -852,6 +926,7 @@ footer{position:relative;z-index:2;margin-top:110px;padding-top:28px;border-top:
         <div class="fact reveal"><b>«Эффективный рекрутинг»</b>вела тренинги, обучала сотрудников «Работы России»</div>
         <div class="fact reveal"><b>Онлайн и очно</b>по всей России онлайн, очно — в Рыбинске</div>
       </div>
+      <button class="about-watch reveal" type="button" data-v="n04"><span class="aw-img"><img src="p_n04.jpg" alt="" loading="lazy"><span class="rc-play"><svg viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M7 4.5v15l13-7.5z"/></svg></span></span><span class="aw-t"><b>Наталья о себе</b>Кто я и почему занимаюсь развитием бизнеса · 0:38</span></button>
       <blockquote class="reveal">«Контент вырастает из смыслов и деятельности, а не сам по себе»<cite>— из рабочей встречи</cite></blockquote>
     </div>
   </div>
@@ -917,6 +992,13 @@ footer{position:relative;z-index:2;margin-top:110px;padding-top:28px;border-top:
 </section>
 </main>
 
+<div class="lb" id="lb" hidden role="dialog" aria-modal="true" aria-label="Видео">
+  <div class="lb-in"><video id="lbv" playsinline controls preload="auto"></video>
+    <div class="lb-cap" id="lbcap"></div></div>
+  <button class="lb-btn lb-x" id="lbx" type="button" aria-label="Закрыть"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+  <button class="lb-btn lb-prev" id="lbp" type="button" aria-label="Предыдущее видео"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 5l-7 7 7 7"/></svg></button>
+  <button class="lb-btn lb-next" id="lbn" type="button" aria-label="Следующее видео"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5l7 7-7 7"/></svg></button>
+</div>
 <script src="gsap.min.js"></script>
 <script src="ScrollTrigger.min.js"></script>
 <script src="lenis.min.js"></script>
@@ -1075,20 +1157,29 @@ const lnEls=seats.map(st=>{const l=document.createElementNS(svgNS,'line');l.setA
 function fillRows(){document.querySelectorAll('#rows li').forEach((li,i)=>setTimeout(()=>li.classList.add(li.dataset.s),REDUCE?0:300+i*260))}
 function fillSeats(){seats.forEach((st,i)=>setTimeout(()=>{st.classList.add('filled');lnEls[i].classList.add('on')},REDUCE?0:450+i*420))}
 
-/* ---------- thumbs ---------- */
-const V=[['01','Какая шестерёнка не сцепляется','0:20'],['02','Арт-студия: новое из того, что уже умеешь','0:33'],['03','Клиенты должны помещаться в жизнь','0:26'],['04','Контент вырастает из смыслов','0:21'],['05','Увидеть процесс, прежде чем его менять','0:32'],['06','Сначала система, потом управляющий','0:21'],['07','Что значит «плохо работает»?','0:22'],['08','Цена — от рынка, а не от ощущений','0:19']];
-const thumbs=document.getElementById('thumbs'),vid=document.getElementById('vid');
-const VS=n=>MOB?`v${n}m.mp4`:`v${n}.mp4`,VP=n=>MOB?`p${n}m.jpg`:`p${n}.jpg`;
-if(MOB){vid.poster=VP('01');vid.src=VS('01')}
-V.forEach(([n,t,d],i)=>{const b=document.createElement('button');b.className='thumb reveal';b.type='button';if(!i)b.setAttribute('aria-current','true');
-  b.innerHTML=`<div class="tv"><img src="${VP(n)}" alt="" loading="lazy"></div><div class="ti"><span>${n}</span>${t}<span class="eqmini" aria-hidden="true"><i></i><i></i><i></i></span><em>${d}</em></div>`;
-  if(FINE){let pv;b.addEventListener('mouseenter',()=>{if(!pv){pv=document.createElement('video');pv.muted=true;pv.loop=true;pv.playsInline=true;pv.preload='none';pv.src=`v${n}.mp4#t=3`;b.querySelector('.tv').appendChild(pv)}pv.play().catch(()=>{})});b.addEventListener('mouseleave',()=>{pv&&pv.pause()})}
-  b.addEventListener('click',()=>{thumbs.querySelectorAll('.thumb').forEach(x=>x.removeAttribute('aria-current'));b.setAttribute('aria-current','true');vid.poster=VP(n);vid.src=VS(n);vid.muted=false;document.getElementById('ovSub').textContent='Наталья рассказывает сама · '+d;vid.setAttribute('aria-label','Видео: '+t);vid.play().catch(()=>{});if(window.innerWidth<1020)vid.scrollIntoView({behavior:'smooth',block:'center'})});
-  thumbs.appendChild(b)});
-const scr=document.getElementById('screen'),ov=document.getElementById('playOv');
-ov.addEventListener('click',()=>{vid.muted=false;vid.volume=1;vid.play().catch(()=>{})});
-vid.addEventListener('play',()=>scr.classList.add('playing'));vid.addEventListener('pause',()=>scr.classList.remove('playing'));
-vid.addEventListener('ended',()=>{const all=[...thumbs.children];const cur=all.findIndex(b=>b.getAttribute('aria-current'));if(all[cur+1])all[cur+1].click()});
+/* ---------- reels + lightbox ---------- */
+const VDIR='';
+const R=[['n20','Когда страшно считать деньги','Разбор вживую','0:32'],['n18','Как освободить время собственника','Разбор вживую','0:44'],['n16','Сколько стоит один клиент','Пример расчёта','0:24'],['n10','Выручка и прибыль','Пример расчёта','0:15'],
+ ['n06','Куда именно вы хотите прийти','Разбор вживую','0:22'],['n03','От совета — к внедрению','Как я работаю','0:24'],['o02','Новое — из того, что уже умеешь','История из практики','0:33'],['o07','Что значит «плохо работает»','Разбор вживую','0:22']];
+const EXTRA={n01:'Отзыв · Театр-студия SOLAR',n02:'Отзыв · Театр-студия SOLAR',n04:'Наталья о себе'};
+const reelsEl=document.getElementById('reels');
+R.forEach(([n,t,k,d])=>{const b=document.createElement('button');b.className='reel-card reveal';b.type='button';b.dataset.v=n;
+  b.innerHTML=`<span class="rc-img"><img src="${VDIR}p_${n}.jpg" alt="" loading="lazy"><span class="rc-play"><svg viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M7 4.5v15l13-7.5z"/></svg></span><em>${d}</em></span>`;b.setAttribute('aria-label',`${k}: ${t}, ${d}`);
+  if(FINE){let pv;b.addEventListener('mouseenter',()=>{if(!pv){pv=document.createElement('video');pv.muted=true;pv.loop=true;pv.playsInline=true;pv.src=`${VDIR}${n}.mp4#t=1`;b.querySelector('.rc-img').appendChild(pv)}pv.play().catch(()=>{})});b.addEventListener('mouseleave',()=>{pv&&pv.pause()})}
+  reelsEl.appendChild(b)});
+const lb=document.getElementById('lb'),lbv=document.getElementById('lbv'),lbcap=document.getElementById('lbcap');
+let lbList=[],lbI=0,lbLast=null;
+function lbShow(i){lbI=(i+lbList.length)%lbList.length;const n=lbList[lbI];const r=R.find(x=>x[0]===n);
+  lbv.poster=`${VDIR}p_${n}.jpg`;lbv.src=`${VDIR}${n}.mp4`;lbv.muted=false;lbv.volume=1;lbv.play().catch(()=>{});
+  lbcap.textContent=r?`${r[2]} · ${r[1]}`:(EXTRA[n]||'');lb.classList.toggle('single',lbList.length<2)}
+function lbOpen(n,list,el){lbLast=el;lbList=list;lb.hidden=false;requestAnimationFrame(()=>lb.classList.add('on'));try{lenis.stop()}catch(e){}document.documentElement.style.overflow='hidden';lbShow(Math.max(0,list.indexOf(n)));document.getElementById('lbx').focus({preventScroll:true})}
+function lbClose(){lb.classList.remove('on');lbv.pause();setTimeout(()=>{lb.hidden=true;lbv.removeAttribute('src');lbv.load()},300);try{lenis.start()}catch(e){}document.documentElement.style.overflow='';lbLast&&lbLast.focus({preventScroll:true})}
+document.addEventListener('click',e=>{const c=e.target.closest('[data-v]');if(!c)return;const n=c.dataset.v;const inReels=R.some(x=>x[0]===n);lbOpen(n,inReels?R.map(x=>x[0]):[n],c)});
+document.getElementById('lbx').addEventListener('click',lbClose);
+document.getElementById('lbp').addEventListener('click',()=>lbShow(lbI-1));document.getElementById('lbn').addEventListener('click',()=>lbShow(lbI+1));
+lb.addEventListener('click',e=>{if(e.target===lb)lbClose()});
+lbv.addEventListener('ended',()=>{if(lbList.length>1)lbShow(lbI+1)});
+document.addEventListener('keydown',e=>{if(lb.hidden)return;if(e.key==='Escape')lbClose();if(e.key==='ArrowRight')lbShow(lbI+1);if(e.key==='ArrowLeft')lbShow(lbI-1)});
 
 /* ---------- FAQ ---------- */
 document.querySelectorAll('.qa button').forEach(b=>b.addEventListener('click',()=>{const qa=b.parentElement;const o=qa.classList.toggle('open');b.setAttribute('aria-expanded',o)}));
@@ -1173,8 +1264,6 @@ mmq.add('(min-width:1021px)',()=>{
 });
 mmq.add('(max-width:1020px)',()=>{gsap.utils.toArray('.scard').forEach(c=>gsap.from(c,{y:60,opacity:0,duration:1,ease:'expo.out',scrollTrigger:{trigger:c,start:'top 88%'}}))});
 
-/* screen zoom-in */
-gsap.fromTo('.screen',{scale:.88,borderRadius:'60px'},{scale:1,borderRadius:'28px',ease:'none',scrollTrigger:{trigger:'.screen',start:'top 95%',end:'top 35%',scrub:true}});
 
 /* org seats fill on enter */
 ScrollTrigger.create({trigger:'#org',start:'top 70%',once:true,onEnter:fillSeats});
